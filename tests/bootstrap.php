@@ -2,8 +2,13 @@
 /**
  * Test Bootstrapper.
  *
- * @since   1.0.0
- * @package Pro_Dev_Tools
+ * {{theme-description}}
+ *
+ * @package   {{theme-package}}
+ * @author    {{theme-author}} <{{theme_author-email}}>
+ * @copyright Copyright (c) {{year}}, {{theme_author}}
+ * @license   GNU General Public License v2 or later
+ * @version   {{theme-version}}
  */
 
 // Get our tests directory.

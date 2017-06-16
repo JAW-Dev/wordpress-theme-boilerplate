@@ -2,12 +2,12 @@
 /**
  * Do Post Published
  *
- * @package   {{theme-package}}
+ * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Functions
- * @author    {{theme-author}} <{{theme_author-email}}>
- * @copyright Copyright (c) {{year}}, {{theme_author}}
- * @license   GNU General Public License v2 or later
- * @since     {{theme-version}}
+ * @author     {{theme-author}} <{{theme_author-email}}>
+ * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @license    GNU General Public License v2 or later
+ * @version    {{theme-version}}
  */
 
 if ( ! function_exists( 'do_post_published' ) ) {

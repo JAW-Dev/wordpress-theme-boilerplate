@@ -2,12 +2,12 @@
 /**
  * Autoloader
  *
- * @package   {{theme-package}}
+ * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes
- * @author    {{theme-author}} <{{theme_author-email}}>
- * @copyright Copyright (c) {{year}}, {{theme_author}}
- * @license   GNU General Public License v2 or later
- * @since     {{theme-version}}
+ * @author     {{theme-author}} <{{theme_author-email}}>
+ * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @license    GNU General Public License v2 or later
+ * @version    {{theme-version}}
  */
 
 namespace Theme_Namespace\Includes;

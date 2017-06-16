@@ -7,7 +7,7 @@
  * @author     {{theme_author}} <{{theme_author-email}}>
  * @copyright  Copyright (c) {{year}}, {{theme_author}}
  * @license    GNU General Public License v2 or later
- * @since      {{theme-version}}
+ * @version    {{theme-version}}
  */
 
 namespace Theme_Namespace\Includes\Classes;

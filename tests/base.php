@@ -2,9 +2,15 @@
 /**
  * Base Test Class.
  *
- * @since   NEXT
- * @package Boilerplate
+ * {{theme-description}}
+ *
+ * @package   {{theme-package}}
+ * @author    {{theme-author}} <{{theme_author-email}}>
+ * @copyright Copyright (c) {{year}}, {{theme_author}}
+ * @license   GNU General Public License v2 or later
+ * @version   {{theme-version}}
  */
+
 abstract class Base_UnitTestCase extends WP_UnitTestCase {
 
 	/**
@@ -145,9 +151,9 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	 */
 	public function invoke_private_method( &$object, $method_name, $parameters = array() ) {
 		$reflection = new \ReflectionClass( get_class( $object ) );
-	    $reflection_method = $reflection->getMethod( $method_name );
-	    $reflection_method->setAccessible( true );
+		$reflection_method = $reflection->getMethod( $method_name );
+		$reflection_method->setAccessible( true );
 
-	    return $reflection_method->invokeArgs( $object, $parameters );
+		return $reflection_method->invokeArgs( $object, $parameters );
 	}
 }

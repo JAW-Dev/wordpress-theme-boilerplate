@@ -8,7 +8,7 @@
  * @author    {{theme-author}} <{{theme_author-email}}>
  * @copyright Copyright (c) {{year}}, {{theme_author}}
  * @license   GNU General Public License v2 or later
- * @since     {{theme-version}}
+ * @version   {{theme-version}}
  */
 
 $format = get_post_format() ? : 'standard';
