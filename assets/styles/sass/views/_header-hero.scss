@@ -1,0 +1,87 @@
+// ========================================
+// Header Hero
+// ========================================
+.site-header__hero {
+	@include mq($until: mobile-ls) {
+		height: px-to-rem(210);
+	}
+	@include mq($from: mobile-ls) {
+		height: px-to-rem(250);
+	}
+	@include mq($from: tablet) {
+		height: px-to-rem(500);
+	}
+	@include mq($from: tablet-ls) {
+		height: px-to-rem(720);
+	}
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 2px solid $gunmetal;
+	height: px-to-rem(800);
+	position: relative;
+
+	&::before {
+		background-image: linear-gradient($tint-blue, $tint-blue);
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+.site-header__branding {
+	height: 100%;
+	left: 0px;
+	position: absolute;
+	text-align: center;
+	top: 0px;
+	width: 100%;
+}
+
+.branding__wrap {
+	@include clearfix;
+	@include vertical-center;
+
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.branding__title,
+.branding__description {
+	color: $white;
+
+	a {
+		color: $white;
+		text-decoration: none;
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			border-bottom: none;
+			color: $white;
+		}
+	}
+}
+
+.branding__title {
+	@include mq($from: tablet) {
+		@include font-size(70);
+	}
+	margin: 0;
+}
+
+.branding__description {
+	@include mq($until: tablet) {
+		@include font-size(14);
+	}
+	@include mq($from: tablet) {
+		@include font-size(21);
+	}
+	margin-top: 0;
+}

@@ -1,0 +1,23 @@
+// ========================================
+// Core Sass file
+// ========================================
+
+/*
+Theme Name: JAWittDesigns - v2
+Theme URI: https://jawittdesigns.com/
+Author: Jason Witt
+Author URI: https://jawittdesigns.com/
+Description: A Custom WordPress Theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jawittdesigns
+Tags: custom
+*/
+
+// Dependencies
+@import "dependencies";
+
+// Styles
+@import "base/index";
+@import "views/index";
