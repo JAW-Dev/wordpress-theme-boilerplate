@@ -4,8 +4,8 @@
  *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme_author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @author     {{theme-author}} <{{theme-author-email}}>
+ * @copyright  Copyright (c) {{year}}, {{theme-author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Content_More' ) ) {
 	/**
 	 * Name
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
 	 */
 	class Content_More {
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Content_More' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Content_More' ) ) {
 		/**
 		 * Posted.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return string The date the post was posted.
@@ -50,7 +50,7 @@ if ( ! class_exists( 'Content_More' ) ) {
 			/**
 			 * Read more text filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The read more text.
@@ -60,7 +60,7 @@ if ( ! class_exists( 'Content_More' ) ) {
 			/**
 			 * Read More span classes filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The read more span classes.
@@ -72,7 +72,7 @@ if ( ! class_exists( 'Content_More' ) ) {
 			/**
 			 * Content More Output filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string $output The content more markup output.

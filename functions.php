@@ -4,7 +4,7 @@
  *
  * @package   {{theme-package}}
  * @author    {{theme-author}} <{{theme-author-email}}>
- * @copyright Copyright (c) {{year}}, {{theme_author}}
+ * @copyright Copyright (c) {{year}}, {{theme-author}}
  * @license   GNU General Public License v2 or later
  * @since     {{theme-version}}
  */
@@ -24,7 +24,7 @@ require_once trailingslashit( get_stylesheet_directory() ) . trailingslashit( 'i
 /**
  * Custom theme setup filter.
  *
- * @author {{theme_author}}
+ * @author {{theme-author}}
  * @since  {{theme-version}}
  *
  * @param array The theme setup.
@@ -34,7 +34,7 @@ $args = apply_filters( 'custom_theme_setup', array(
 	/**
 	 * Add theme support filter.
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
 	 *
 	 * @param array Add theme support.
@@ -58,7 +58,7 @@ $args = apply_filters( 'custom_theme_setup', array(
 	/**
 	 * Add custom image sizes filter.
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
 	 *
 	 * @param array Add custom image sizes.
@@ -75,7 +75,7 @@ $args = apply_filters( 'custom_theme_setup', array(
 	/**
 	 * Register nav menus filter.
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
 	 *
 	 * @param array Register nav menus.
@@ -93,7 +93,7 @@ $setup = new Classes\Setup( $args );
 /**
  * Register Widget Areas.
  *
- * @author {{theme_author}}
+ * @author {{theme-author}}
  * @since  {{theme-version}}
  *
  * @param array Register widget areas.

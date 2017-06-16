@@ -4,8 +4,8 @@
  *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme_author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @author     {{theme-author}} <{{theme-author-email}}>
+ * @copyright  Copyright (c) {{year}}, {{theme-author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 	/**
 	 * Name
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
 	 */
 	class Post_Published {
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 		/**
 		 * Posted.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return string The date the post was posted.
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 			/**
 			 * Published on time tag classes filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The time tag classes.
@@ -69,7 +69,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 				/**
 				 * Published on Time tag updated classes filter.
 				 *
-				 * @author {{theme_author}}
+				 * @author {{theme-author}}
 				 * @since  {{theme-version}}
 				 *
 				 * @param string The time tag updated classes.
@@ -80,7 +80,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 			/**
 			 * Published on text filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The published on text.
@@ -93,7 +93,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 			/**
 			 * Published on span tag classes filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The span tag classes.
@@ -104,7 +104,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 			/**
 			 * Published on Output filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string $output The published on markup output.

@@ -4,8 +4,8 @@
  *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme_author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @author     {{theme-author}} <{{theme-author-email}}>
+ * @copyright  Copyright (c) {{year}}, {{theme-author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 	/**
 	 * Enqueue Styles
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  0.0.1
 	 */
 	class Enqueue_Styles {
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Debug.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @var boolean
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Minified File.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @var string
@@ -45,7 +45,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -60,7 +60,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Hooks.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -72,7 +72,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Stylesheet Version.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @param string $file           The file to enqueue.
@@ -102,7 +102,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Theme Base Styles.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  0.0.1
 		 *
 		 * @return void

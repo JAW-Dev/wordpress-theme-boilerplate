@@ -4,8 +4,8 @@
  *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme_author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @author     {{theme-author}} <{{theme-author-email}}>
+ * @copyright  Copyright (c) {{year}}, {{theme-author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 	/**
 	 * Name
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
 	 */
 	class Post_Updated {
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 		/**
 		 * Posted.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return string $posted_on The date the post was posted.
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 			/**
 			 * Updated on time tag classes filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The time tag classes.
@@ -68,7 +68,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 			/**
 			 * Updated on text filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The updated on text.
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 			/**
 			 * Updated on span tag classes filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string The span tag classes.
@@ -92,7 +92,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 			/**
 			 * Updated on Output filter.
 			 *
-			 * @author {{theme_author}}
+			 * @author {{theme-author}}
 			 * @since  {{theme-version}}
 			 *
 			 * @param string $output The updated on markup output.

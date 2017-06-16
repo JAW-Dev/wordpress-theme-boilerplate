@@ -5,7 +5,7 @@
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Functions
  * @author     {{theme-author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @copyright  Copyright (c) {{year}}, {{theme-author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
@@ -14,7 +14,7 @@
 	 /**
 	  * Content More Link
 	  *
-	  * @author {{theme_author}}
+	  * @author {{theme-author}}
 	  * @since  {{theme-version}}
 	  *
 	  * @return string The Content read more text.

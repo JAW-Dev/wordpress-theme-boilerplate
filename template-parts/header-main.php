@@ -5,7 +5,7 @@
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Template_Parts
  * @author     {{theme-author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @copyright  Copyright (c) {{year}}, {{theme-author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */

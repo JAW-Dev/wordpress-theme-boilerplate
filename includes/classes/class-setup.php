@@ -4,8 +4,8 @@
  *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme_author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme_author}}
+ * @author     {{theme-author}} <{{theme-author-email}}>
+ * @copyright  Copyright (c) {{year}}, {{theme-author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Setup' ) ) {
 	/**
 	 * Name
 	 *
-	 * @author {{theme_author}}
+	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
 	 */
 	class Setup {
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Arguments.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @var array
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @param array $args The array of setup arguments.
@@ -69,7 +69,7 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Load textdomain.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Add Theme support.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -112,7 +112,7 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Add Image Size.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
@@ -142,7 +142,7 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Register Nav Menus.
 		 *
-		 * @author {{theme_author}}
+		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
 		 * @return void
