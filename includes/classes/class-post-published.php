@@ -4,7 +4,7 @@
  *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme_author}} <{{theme_author-email}}>
+ * @author     {{theme_author}} <{{theme-author-email}}>
  * @copyright  Copyright (c) {{year}}, {{theme_author}}
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
