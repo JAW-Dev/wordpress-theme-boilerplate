@@ -59,6 +59,17 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	protected $properties = array();
 
 	/**
+	 * Initialize the class
+	 *
+	 * @since  NEXT
+	 *
+	 * @return string
+	 */
+	public function dirname() {
+		return trailingslashit( plugin_dir_path( __DIR__ ) );
+	}
+
+	/**
 	 * Test if file file exists.
 	 *
 	 * @since NEXT
