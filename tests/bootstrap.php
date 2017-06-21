@@ -25,7 +25,7 @@ require_once $_tests_dir . '/includes/functions.php';
 function _manually_load_plugins() {
 
 	// Require our plugin.
-	if ( file_exists( dirname( dirname( __FILE__ ) ) ) . '/plugin-file-name.php' ) ) {
+	if ( file_exists( dirname( dirname( __FILE__ ) ) . '/plugin-file-name.php' ) ) {
 		require dirname( dirname( __FILE__ ) ) . '/plugin-file-name.php';
 	}
 
