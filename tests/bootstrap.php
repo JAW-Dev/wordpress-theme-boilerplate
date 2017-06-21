@@ -25,9 +25,17 @@ require_once $_tests_dir . '/includes/functions.php';
 function _manually_load_plugins() {
 
 	// Require our plugin.
-	if ( file_exists( trailingslashit( PROJECT_DIR ) . 'plugin-file-name.php' ) ) {
+	if ( file_exists( dirname( dirname( __FILE__ ) ) ) . '/plugin-file-name.php' ) ) {
 		require dirname( dirname( __FILE__ ) ) . '/plugin-file-name.php';
 	}
+
+	// Plugins to activate.
+	$active_plugins = array(
+		'plugin-file-name/plugin-file-name.php',
+	);
+
+	// Update the active_plugins options with the $active_plugins array.
+	update_option( 'active_plugins', $active_plugins );
 }
 
 // Inject in our plugin.
