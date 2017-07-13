@@ -1,0 +1,51 @@
+@charset "UTF-8";
+// ========================================
+// Basic
+// ========================================
+
+.grid__row {
+	overflow: hidden;
+}
+
+.grid__col {
+	float: left;
+}
+
+@each $key, $value in $grid {
+	// Desktop.
+	$desktop-value: map-get($desktop, $key);
+	// Tablet Landscape.
+	$tablet-lg-value: map-get($tablet-lg, $key);
+	// Tablet
+	$tablet-value: map-get($tablet, $key);
+	// Tablet Small
+	$tablet-sm-value: map-get($tablet-sm, $key);
+	// Phone Landscape.
+	$mobile-lg-value: map-get($mobile-lg, $key);
+	// Phone.
+	$mobile-value: map-get($mobile, $key);
+
+	.grid__col.col__#{$key} {
+		@include media("<=desktop") {
+			width: $desktop-value;
+		}
+		@include media("<=tablet-lg") {
+			width: $tablet-lg-value;
+		}
+		@include media("<=tablet") {
+			width: $tablet-value;
+		}
+		@include media("<=tablet-sm") {
+			width: $tablet-sm-value;
+		}
+		@include media("<=mobile-lg") {
+			width: $mobile-lg-value;
+		}
+		@include media("<=mobile") {
+			width: $mobile-value;
+		}
+		margin-left: $gutter / 2;
+		margin-right: $gutter / 2;
+		width: $value;
+	}
+}

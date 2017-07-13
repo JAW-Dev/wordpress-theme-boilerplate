@@ -16,7 +16,7 @@
 //        font-size: 1rem;
 //     }
 
-@mixin font-size($size-value: 1) {
-	font-size: $size-value + px;
-	font-size: px-to-rem($size-value);
+@mixin font-size($size-value: 1px) {
+	font-size: $size-value;
+	font-size: rem($size-value);
 }

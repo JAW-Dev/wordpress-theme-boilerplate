@@ -4,16 +4,15 @@
 
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
-	height: px-to-rem(1px);
+	height: rem(1px);
 	overflow: hidden;
 	position: absolute;
-	width: px-to-rem(1px);
+	width: rem(1px);
 
 	&:focus {
 		@include font-size(0.875);
 
 		background-color: $color-background-screen;
-		// border-radius: 3px;
 		box-shadow: 0 0 2px 2px $color-screen-reader-box-shadow;
 		clip: auto;
 		color: $color-text-screen;
@@ -22,7 +21,7 @@
 		height: auto;
 		left: 5px;
 		line-height: normal;
-		padding: px-to-rem(15px) px-to-rem(23px) px-to-rem(14px);
+		padding: rem(15px) rem(23px) rem(14px);
 		text-decoration: none;
 		top: 5px;
 		width: auto;

@@ -22,7 +22,7 @@
 //       background-size: 2em;
 //     }
 
-@mixin svg-background($icon, $size: px-to-em(32), $repeat: no-repeat, $v-position: center, $h-position: center) {
+@mixin svg-background($icon, $size: em(32), $repeat: no-repeat, $v-position: center, $h-position: center) {
 	background: url("#{$path-svg}#{$icon}.svg") $repeat $v-position  $h-position;
 	background-size: $size;
 }

@@ -1,0 +1,90 @@
+// ========================================
+// Layout
+// ========================================
+
+// Columns.
+$columns: 12;
+
+// Gutter.
+$gutter: 1%;
+
+// Columns.
+$grid: (
+	1: grid-width(1), // 8.33333% - $gutter,
+	2: grid-width(2), // 16.66667% - $gutter,
+	3: grid-width(3), // 25% - $gutter,
+	4: grid-width(4), // 33.33333% - $gutter,
+	5: grid-width(5), // 41.66667% - $gutter,
+	6: grid-width(6), // 50% - $gutter,
+	7: grid-width(7), // 58.33333% - $gutter,
+	8: grid-width(8), // 66.66667% - $gutter,
+	9: grid-width(9), // 75% - $gutter,
+	10: grid-width(10), // 83.33333% - $gutter,
+	11: grid-width(11), // 91.66667% - $gutter,
+	12: grid-width(12) // 100% - $gutter
+);
+$zed: 0%;
+
+// Breakpoints.
+$breakpoints: (
+	mobile: 320px,
+	mobile-lg: 480px,
+	tablet-sm: 640px,
+	tablet: 768px,
+	tablet-lg: 980px,
+	desktop: 1200px,
+	full: 1440px
+);
+
+// z-index
+$layers: (
+	"base",
+	"body"
+);
+
+// Desktop.
+$desktop: map-merge($grid, (
+		1: map-get($grid, 2),
+		11: map-get($grid, 12)
+	)
+);
+// Tablet Large.
+$tablet-lg: map-merge($desktop, (
+		1: map-get($grid, 3),
+		2: map-get($grid, 3),
+		5: map-get($grid, 6),
+		7: map-get($grid, 8),
+		10: map-get($grid, 12)
+	)
+);
+// Tablet.
+$tablet: map-merge($tablet-lg, (
+		1: map-get($grid, 4),
+		2: map-get($grid, 4),
+		3: map-get($grid, 6),
+		4: map-get($grid, 6),
+		6: map-get($grid, 12),
+		7: map-get($grid, 12),
+		8: map-get($grid, 12),
+		9: map-get($grid, 12)
+	)
+);
+// Tablet Small.
+$tablet-sm: map-merge($tablet, (
+		1: map-get($grid, 6),
+		2: map-get($grid, 6),
+		3: map-get($grid, 12),
+		4: map-get($grid, 12),
+		5: map-get($grid, 12),
+	)
+);
+// Phone Landscape.
+$mobile-lg: map-merge($tablet-sm, (
+		2: map-get($grid, 12)
+	)
+);
+// Phone.
+$mobile: map-merge($mobile-lg, (
+		1: map-get($grid, 12)
+	)
+);

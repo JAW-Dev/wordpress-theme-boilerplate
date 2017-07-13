@@ -1,5 +1,7 @@
 // ========================================
-// Font Sizes
+// Clearings
 // ========================================
 
-$font-size-base: 16px;
+.clear {
+	@include clearfix;
+}
