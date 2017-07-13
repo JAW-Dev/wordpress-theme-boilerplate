@@ -2,6 +2,8 @@
 /**
  * Do Comments Title
  *
+ * Load: true
+ *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Functions
  * @author     {{theme-author}} <{{theme-author-email}}>
@@ -10,22 +12,22 @@
  * @version    {{theme-version}}
  */
 
- if ( ! function_exists( 'do_comments_title' ) ) {
-	 /**
-	  * Comments Title
-	  *
-	  * @author {{theme-author}}
-	  * @since  {{theme-version}}
-	  *
-	  * @return void
-	  */
-	 function do_comments_title() {
-		 $allowed_tags = array(
-			 'span' => array(
-				 'class' => array(),
-			 ),
-		 );
-		 $comments_title = new Theme_Namespace\Includes\Classes\Post_Comments_Title;
-		 echo wp_kses( $comments_title->render(), $allowed_tags );
-	 }
- }
+if ( ! function_exists( 'do_comments_title' ) ) {
+	/**
+	 * Comments Title
+	 *
+	 * @author {{theme-author}}
+	 * @since  {{theme-version}}
+	 *
+	 * @return void
+	 */
+	function do_comments_title() {
+		$allowed_tags = array(
+			'span' => array(
+				'class' => array(),
+			),
+		);
+		$comments_title = new Theme_Namespace\Includes\Classes\Post_Comments_Title;
+		echo wp_kses( $comments_title->render(), $allowed_tags );
+	}
+}

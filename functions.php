@@ -108,11 +108,6 @@ $args = apply_filters( 'custom_register_widget_areas', array(
 $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 
 // ==============================================
-// Head Cleaner
-// ==============================================
-$head_cleaner = new Classes\Head_Cleaner;
-
-// ==============================================
 // Stylesheets
 // ==============================================
 $enqueue_styles = new Classes\Enqueue_Styles;

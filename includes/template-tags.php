@@ -51,12 +51,6 @@
 	 return $results;
  }
 
-foreach ( glob( trailingslashit( get_stylesheet_directory() ) . 'includes/functions/*.php' ) as $file ) {
-	if ( file_exists( $file ) ) {
-		include $file;
-	}
-}
-
 // Get the file to include.
 $files = load_files( trailingslashit( get_stylesheet_directory() ) . 'includes/functions' );
 

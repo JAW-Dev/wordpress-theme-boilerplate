@@ -2,6 +2,8 @@
 /**
  * Do Post Published
  *
+ * Load: true
+ *
  * @package    {{theme-package}}
  * @subpackage {{theme-package}}/Includes/Functions
  * @author     {{theme-author}} <{{theme-author-email}}>
