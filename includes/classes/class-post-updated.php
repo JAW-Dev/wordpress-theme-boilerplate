@@ -87,7 +87,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 			 * @param string The span tag classes.
 			 */
 			$span_tag_classes = apply_filters( 'updated_on_span_tag_classes_filter', 'updated-on' );
-			$output   = wp_kses( '<span class="' . esc_attr( $span_tag_classes ) . '">' . esc_html( $text ) . ' <a href="' . esc_url( $url ) . '" rel="bookmark">' . wp_kses( $time, $allowed_tags ). '</a></span>', $allowed_tags );
+			$output   = wp_kses( '<span class="' . esc_attr( $span_tag_classes ) . '">' . esc_html( $text ) . ' <a href="' . esc_url( $url ) . '" rel="bookmark">' . wp_kses( $time, $allowed_tags ) . '</a></span>', $allowed_tags );
 
 			/**
 			 * Updated on Output filter.
