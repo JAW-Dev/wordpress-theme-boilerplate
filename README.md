@@ -1,2 +1,2 @@
-# WordPress Theme Boilerplate
-A WordPress theme boilerplate
+# {{theme-name}}
+{{theme-description}}
