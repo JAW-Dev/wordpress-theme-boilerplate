@@ -1,7 +1,7 @@
 {
 	"name": "{{theme-author}}/{{theme-name}}",
 	"description": "{{theme-description}}",
-	"license": "GPL v2+",
+	"license": "GNU General Public License v2 or later",
 	"authors": [
 		{
 			"name": "{{theme-author}}",
