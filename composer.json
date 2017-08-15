@@ -1,11 +1,11 @@
 {
-	"name": "author-name/theme-name",
-	"description": "A custom WordPress theme.",
+	"name": "{{theme-author}}/{{theme-name}}",
+	"description": "{{theme-description}}",
 	"license": "GPL v2+",
 	"authors": [
 		{
-			"name": "author-name",
-			"email": "author-email@domain.com"
+			"name": "{{theme-author}}",
+			"email": "{{theme-author-email}}"
 		}
 	],
 	"require": {},
