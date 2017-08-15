@@ -15,7 +15,7 @@ namespace Theme_Namespace\Includes\Classes;
 if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 
 	/**
-	 * Name
+	 * Register Widget Areas.
 	 *
 	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
