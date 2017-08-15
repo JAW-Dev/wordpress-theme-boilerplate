@@ -18,13 +18,13 @@ $description = get_bloginfo( 'description', 'display' );
 		<section class="site-header__branding">
 			<div class="branding__wrap">
 				<h1 class="branding__title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $name );?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $name ); ?></a>
 				</h1>
 				<?php if ( $description ) : ?>
-					<p class="branding__description"><?php echo esc_html( $description );?></p>
+					<p class="branding__description"><?php echo esc_html( $description ); ?></p>
 				<?php endif; ?>
 			</div>
 		</section><!-- /.site-header__branding -->
-		<?php get_template_part( 'template-parts/nav-menu', 'main' );?>
+		<?php get_template_part( 'template-parts/nav-menu', 'main' ); ?>
 	</div><!-- /.wrap -->
 </header><!-- /.site-header -->

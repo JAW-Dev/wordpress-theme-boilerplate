@@ -9,6 +9,7 @@
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
+
 ?>
 <section class="error-404">
 	<header class="error-404__header section-header">

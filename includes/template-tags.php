@@ -17,39 +17,39 @@
  *
  * @return array
  */
- function load_files( $dir ) {
+function load_files( $dir ) {
 
-	 // Declare the results array to return.
-	 $results = array();
+	// Declare the results array to return.
+	$results = array();
 
-	 // Scan the dir for files.
-	 $files = scandir( $dir );
+	// Scan the dir for files.
+	$files = scandir( $dir );
 
-	 // Loop through the files in the directory.
-	 foreach ( $files as $file ) {
-		 // Exclude . and ..
-		 if ( ('.' === $file ) || ( '..' === $file ) ) {
-			 continue;
-		 }
+	// Loop through the files in the directory.
+	foreach ( $files as $file ) {
+		// Exclude . and ..
+		if ( ('.' === $file ) || ( '..' === $file ) ) {
+			continue;
+		}
 
-		 // Get the path to the file.
-		 $file = trailingslashit( $dir ) . $file;
+		// Get the path to the file.
+		$file = trailingslashit( $dir ) . $file;
 
-		 // Get the file header info.
-		 $header = get_file_data( $file, array( 'Load' => 'Load' ) );
+		// Get the file header info.
+		$header = get_file_data( $file, array( 'Load' => 'Load' ) );
 
-		 // Get the file extension.
-		 $extension = substr( $file, strrpos( $file, '.' ) + 1 );
+		// Get the file extension.
+		$extension = substr( $file, strrpos( $file, '.' ) + 1 );
 
-		 // If 'Load' is true and the file is a PHP file.
-		 if ( 'true' === $header['Load'] && 'php' === $extension ) {
-			 $results[] = $file;
-		 }
-	 }
+		// If 'Load' is true and the file is a PHP file.
+		if ( 'true' === $header['Load'] && 'php' === $extension ) {
+			$results[] = $file;
+		}
+	}
 
-	 // Return the results array.
-	 return $results;
- }
+	// Return the results array.
+	return $results;
+}
 
 // Get the file to include.
 $files = load_files( trailingslashit( get_stylesheet_directory() ) . 'includes/functions' );

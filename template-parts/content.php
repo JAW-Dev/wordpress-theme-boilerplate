@@ -19,7 +19,8 @@
 		else :
 			the_title( '<h2 class="header__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-		if ( 'post' === get_post_type() ) : ?>
+		if ( 'post' === get_post_type() ) :
+		?>
 			<div class="header__meta">
 				<?php
 				do_post_published();
@@ -27,8 +28,7 @@
 				do_author_byline();
 				?>
 			</div><!-- /.header__meta -->
-		<?php
-		endif; ?>
+		<?php endif; ?>
 	</header><!-- /.entry__header -->
 	<div class="entry__content">
 		<?php

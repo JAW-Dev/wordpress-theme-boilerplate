@@ -9,6 +9,7 @@
  * @license    GNU General Public License v2 or later
  * @version    {{theme-version}}
  */
+
 ?>
 <nav id="comment-nav-above" class="navigation comment__navigation" role="navigation">
 	<h2 class="screen-reader-text">

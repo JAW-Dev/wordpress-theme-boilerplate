@@ -78,6 +78,7 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 				$defaults = array(
 					'id'            => '',
 					'name'          => '',
+					// Translators: The widget name.
 					'description'   => sprintf( __( 'Widget area for the %s', '{{theme-textdomain}}' ), $widget['name'] ),
 					'before_widget' => '<aside class="widget %2$s">',
 					'after_widget'  => '</aside>',
