@@ -38,13 +38,30 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 		 * @author {{theme-author}}
 		 * @since  {{theme-version}}
 		 *
-		 * @param array $args The array of register widget areas arguments.
+		 * @param array $args {
+		 *     The array of register widget areas arguments.
+		 *
+		 *     @type array {
+		 *         The individual widget area arguments.
+		 *
+		 *         @type string $name          The name or title of the sidebar. Default 'Sidebar $instance'.
+		 *         @type string $id            The unique identifier by which the sidebar will be called. Default 'sidebar-$instance'.
+		 *         @type string $description   Description of the sidebar, displayed in the Widgets interface. Default empty string.
+		 *         @type string $class         Extra CSS class to assign to the sidebar in the Widgets interface.  Default empty.
+		 *         @type string $before_widget HTML content to prepend to each widget's HTML output. Default is an opening list item element.
+		 *         @type string $after_widget  HTML content to append to each widget's HTML output. Default is a closing list item element.
+		 *         @type string $before_title  HTML content to prepend to the sidebar title. Default is an opening h2 element.
+		 *         @type string $after_title   HTML content to append to the sidebar title. Default is a closing h2 element.
+		 *     }
+		 * }
 		 *
 		 * @return void
 		 */
 		public function __construct( $args ) {
+			// Set the widget area arguments.
 			$this->widgets = $this->arguments( $args );
 
+			// Initiate.
 			$this->hooks();
 		}
 
@@ -54,7 +71,18 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 		 * @author Jason Witt
 		 * @since  0.0.1
 		 *
-		 * @param array $args The array of defined arguments.
+		 * @param array|string $args {
+		 *     Optional. Array or string of arguments for the sidebar being registered.
+		 *
+		 *     @type string $name          The name or title of the sidebar. Default 'Sidebar $instance'.
+		 *     @type string $id            The unique identifier by which the sidebar will be called. Default 'sidebar-$instance'.
+		 *     @type string $description   Description of the sidebar, displayed in the Widgets interface. Default empty string.
+		 *     @type string $class         Extra CSS class to assign to the sidebar in the Widgets interface.  Default empty.
+		 *     @type string $before_widget HTML content to prepend to each widget's HTML output. Default is an opening list item element.
+		 *     @type string $after_widget  HTML content to append to each widget's HTML output. Default is a closing list item element.
+		 *     @type string $before_title  HTML content to prepend to the sidebar title. Default is an opening h2 element.
+		 *     @type string $after_title   HTML content to append to the sidebar title. Default is a closing h2 element.
+		 * }
 		 *
 		 * @return void
 		 */
@@ -67,6 +95,7 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 
 			$widgets = array();
 
+			// Loop through the defined arguments.
 			foreach ( $args as $widget ) {
 
 				// Skip if 'id' or 'name' is not set.

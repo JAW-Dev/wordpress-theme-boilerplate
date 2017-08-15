@@ -96,14 +96,31 @@ $setup = new Classes\Setup( $args );
  * @author {{theme-author}}
  * @since  {{theme-version}}
  *
- * @param array Register widget areas.
+ * @param array $args {
+ *     The array of register widget areas arguments.
+ *
+ *     @type array {
+ *         The individual widget area arguments.
+ *
+ *         @type string $name          The name or title of the sidebar. Default 'Sidebar $instance'.
+ *         @type string $id            The unique identifier by which the sidebar will be called. Default 'sidebar-$instance'.
+ *         @type string $description   Description of the sidebar, displayed in the Widgets interface. Default empty string.
+ *         @type string $class         Extra CSS class to assign to the sidebar in the Widgets interface.  Default empty.
+ *         @type string $before_widget HTML content to prepend to each widget's HTML output. Default is an opening list item element.
+ *         @type string $after_widget  HTML content to append to each widget's HTML output. Default is a closing list item element.
+ *         @type string $before_title  HTML content to prepend to the sidebar title. Default is an opening h2 element.
+ *         @type string $after_title   HTML content to append to the sidebar title. Default is a closing h2 element.
+ *     }
+ * }
  */
-$args = apply_filters( 'custom_register_widget_areas', array(
+$args = apply_filters( 'custom_register_widget_areas',
 	array(
-		'id'   => 'primary',
-		'name' => __( 'Primary Sidebar', '{{theme-textdomain}}' ),
-	),
-) );
+		array(
+			'id'   => 'primary',
+			'name' => __( 'Primary Sidebar', '{{theme-textdomain}}' ),
+		),
+	)
+);
 
 $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 
