@@ -115,4 +115,4 @@ $enqueue_styles = new Classes\Enqueue_Styles;
 // ==============================================
 // Template Tags
 // ==============================================
-require_once trailingslashit( get_stylesheet_directory() ) . trailingslashit( 'includes' ) . 'template-tags.php';
+$template_tags = new Classes\Template_Tags( 'includes/functions' );
