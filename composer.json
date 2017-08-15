@@ -1,0 +1,13 @@
+{
+	"name": "author-name/theme-name",
+	"description": "A custom WordPress theme.",
+	"license": "GPL v2+",
+	"authors": [
+		{
+			"name": "author-name",
+			"email": "author-email@domain.com"
+		}
+	],
+	"require": {},
+	"require-dev": {}
+}
