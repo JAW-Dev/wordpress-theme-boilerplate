@@ -1,13 +1,13 @@
 {
-	"name": "boilerplate",
-	"version": "1.0.5",
-	"description": "A boilerplate.",
+	"name": "{{theme-author}}/{{theme-name}}",
+	"author": "{{theme-author}}",
+	"description": "{{theme-description}}",
+	"version": "{{theme-version}}",
+	"license": "GNU General Public License v2 or later",
 	"main": "Gulpfile.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "Jason Witt",
-	"license": "GPLv2",
 	"devDependencies": {
 		"autoprefixer": "latest",
 		"babel-core": "latest",
@@ -37,11 +37,9 @@
 		"gulp-util": "latest",
 		"gulp-watch": "latest",
 		"gulp-wp-pot": "latest",
+		"normalize-scss": "latest",
 		"require-dir": "latest",
 		"sass-mq": "latest",
 		"yargs": "latest"
-	},
-	"dependencies": {
-		"normalize-scss": "latest"
 	}
 }
