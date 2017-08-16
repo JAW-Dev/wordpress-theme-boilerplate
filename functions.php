@@ -40,6 +40,18 @@ $args = apply_filters( 'custom_theme_setup', array(
 	 * @since  {{theme-version}}
 	 *
 	 * @param array Add theme support.
+	 *
+	 * @example array( 'type' => 'automatic-feed-links' ).
+	 * @example array(
+	 *        'type'   => 'html5',
+	 *        'params' => array(
+	 *            'search-form',
+	 *            'comment-form',
+	 *            'comment-list',
+	 *            'gallery',
+	 *            'caption',
+	 *        ),
+	 *    )
 	 */
 	'theme_support' => apply_filters( 'custom_theme_support', array(
 		array( 'type' => 'automatic-feed-links' ),
@@ -64,15 +76,15 @@ $args = apply_filters( 'custom_theme_setup', array(
 	 * @since  {{theme-version}}
 	 *
 	 * @param array Add custom image sizes.
+	 *
+	 * @example array(
+	 *        'name'   => '',
+	 *        'width'  => '',
+	 *        'height' => '',
+	 *        'crop'   => '',
+	 *     )
 	 */
-	'add_image_size' => apply_filters( 'custom_add_image_size', array(
-		array(
-			'name'   => '',
-			'width'  => '',
-			'height' => '',
-			'crop'   => '',
-		),
-	) ),
+	'add_image_size' => apply_filters( 'custom_add_image_size', array() ),
 
 	/**
 	 * Register nav menus filter.
@@ -81,6 +93,8 @@ $args = apply_filters( 'custom_theme_setup', array(
 	 * @since  {{theme-version}}
 	 *
 	 * @param array Register nav menus.
+	 *
+	 * @example 'primary-menu' => __( 'Primary Menu', '{{theme-textdomain}}' )
 	 */
 	'register_nav_menus' => apply_filters( 'custom_register_nav_menus', array(
 		'primary-menu' => __( 'Primary Menu', '{{theme-textdomain}}' ),
