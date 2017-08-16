@@ -15,7 +15,7 @@ namespace Theme_Namespace\Includes\Classes;
 if ( ! class_exists( 'Content_More' ) ) {
 
 	/**
-	 * Name
+	 * Content More Link.
 	 *
 	 * @author {{theme-author}}
 	 * @since  {{theme-version}}
