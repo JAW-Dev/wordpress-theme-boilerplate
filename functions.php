@@ -13,21 +13,23 @@ namespace Theme_Namespace;
 
 use Theme_Namespace\Includes\Classes as Classes;
 
-// ==============================================
-// Autoloader
-// ==============================================
+/*
+ * Autoloader
+ * ----------------------------------------
+ */
 require_once trailingslashit( get_stylesheet_directory() ) . trailingslashit( 'includes' ) . 'autoload.php';
 
-// ==============================================
-// Theme Setup
-// ==============================================
+/*
+ * Setup
+ * ----------------------------------------
+ */
 /**
  * Custom theme setup filter.
  *
  * @author {{theme-author}}
  * @since  {{theme-version}}
  *
- * @param array The theme setup.
+ * @param array The theme setup arguments.
  */
 $args = apply_filters( 'custom_theme_setup', array(
 
@@ -87,9 +89,10 @@ $args = apply_filters( 'custom_theme_setup', array(
 
 $setup = new Classes\Setup( $args );
 
-// ==============================================
-// Register Widget Areas.
-// ==============================================
+/*
+ * Register Widget Areas.
+ * ----------------------------------------
+ */
 /**
  * Register Widget Areas.
  *
@@ -130,12 +133,14 @@ $args = apply_filters( 'custom_register_widget_areas',
 
 $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 
-// ==============================================
-// Stylesheets
-// ==============================================
+/*
+ * Stylesheets
+ * ----------------------------------------
+ */
 $enqueue_styles = new Classes\Enqueue_Styles;
 
-// ==============================================
-// Template Tags
-// ==============================================
+/*
+ * Template Tags
+ * ----------------------------------------
+ */
 $template_tags = new Classes\Template_Tags( 'includes/functions' );
