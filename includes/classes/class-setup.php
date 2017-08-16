@@ -60,10 +60,25 @@ if ( ! class_exists( 'Setup' ) ) {
 			);
 			$this->args = wp_parse_args( $args, $defaults );
 
-			$this->load_textdomain();
-			$this->add_theme_support();
-			$this->add_image_size();
-			$this->register_nav_menus();
+			// Initiate.
+			$this->init();
+		}
+
+		/**
+		 * Initiate.
+		 *
+		 * @author Jason Witt
+		 * @since  0.0.1
+		 *
+		 * @return void
+		 */
+		public function init() {
+			add_action( 'after_setup_theme', function() {
+				$this->load_textdomain();
+				$this->add_theme_support();
+				$this->add_image_size();
+				$this->register_nav_menus();
+			} );
 		}
 
 		/**
