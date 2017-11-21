@@ -14,7 +14,7 @@
 <div id="comments" class="comments">
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments__title">
-			<?php do_comments_title(); ?>
+			<?php wp_dl_post_comments_title(); ?>
 		</h2><!-- /.comments__title -->
 		<?php
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :

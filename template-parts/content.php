@@ -19,20 +19,29 @@
 		else :
 			the_title( '<h2 class="header__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
+		if ( has_post_thumbnail() ) :
+			?>
+			<figure>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php the_post_thumbnail(); ?>
+				</a>
+			</figure>
+			<?php
+		endif;
 		if ( 'post' === get_post_type() ) :
 		?>
 			<div class="header__meta">
 				<?php
-				do_post_published();
-				do_post_updated();
-				do_author_byline();
+				wp_dl_post_published();
+				wp_dl_post_updated();
+				wp_dl_post_author_byline();
 				?>
 			</div><!-- /.header__meta -->
 		<?php endif; ?>
 	</header><!-- /.entry__header -->
 	<div class="entry__content">
 		<?php
-			the_content( do_content_read_more() );
+			the_content( wp_dl_content_more_text() );
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '{{theme-textdomain}}' ),
 				'after'  => '</div>',
