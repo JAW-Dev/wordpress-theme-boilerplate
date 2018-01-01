@@ -160,10 +160,41 @@ $args = apply_filters( 'custom_register_widget_areas',
 $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 
 /*
- * Stylesheets
+ * Enqueue Styles.
  * ----------------------------------------
  */
-$enqueue_styles = new Classes\Enqueue_Styles;
+/**
+ * Enqueue Styles
+ *
+ * @author Theme_Author
+ * @since  1.0.0
+ *
+ * @param array $args {
+ *     Array of enqueued script arguments.
+ *
+ *     @type array {
+ *         Array or string of arguments for the script being registered.
+ *
+ *         @type string $handle        (Required) The handle or name of the script.
+ *         @type string $scr           (Required) The source of the file to enqueue.
+ *         @type string $dependecies   (Optional) The dependencies of the enqueued file.
+ *                                         Default: array()
+ *         @type string $version       (Optional) The version of the file.
+ *                                         Default: '1.0.0'.
+ *     }
+ * }
+ */
+
+$args = array(
+	array(
+		'handle'       => 'Theme_Textdomain-style',
+		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'style' . Classes\Enqueue_Styles::$min . '.css',
+		'dependencies' => array(),
+		'version'      => Classes\Enqueue_Styles::version( 'style' . Classes\Enqueue_Styles::$min . '.css' ),
+	),
+);
+$enqueue_styles = new Classes\Enqueue_Styles( $args );
+
 
 /*
  * Template Tags

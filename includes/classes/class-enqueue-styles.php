@@ -20,27 +20,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 	 * @author Theme_Author
 	 * @since  1.0.0
 	 */
-	class Enqueue_Styles {
-
-		/**
-		 * Debug.
-		 *
-		 * @author Theme_Author
-		 * @since  1.0.0
-		 *
-		 * @var boolean
-		 */
-		protected $debug;
-
-		/**
-		 * Minified File.
-		 *
-		 * @author Theme_Author
-		 * @since  1.0.0
-		 *
-		 * @var string
-		 */
-		protected $min;
+	class Enqueue_Styles extends Enqueue_Abstract {
 
 		/**
 		 * Initialize the class
@@ -48,13 +28,29 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		 * @author Theme_Author
 		 * @since  1.0.0
 		 *
+		 * @param array $args {
+		 *     Array of enqueued script arguments.
+		 *
+		 *     @type array {
+		 *         Array or string of arguments for the script being registered.
+		 *
+		 *         @type string $handle        (Required) The handle or name of the script.
+		 *         @type string $scr           (Required) The source of the file to enqueue.
+		 *         @type string $dependecies   (Optional) The dependencies of the enqueued file.
+		 *                                         Default: array()
+		 *         @type string $version       (Optional) The version of the file.
+		 *                                         Default: '1.0.0'.
+		 *         @type string $media     (Optional) If Stylesheet, The media for which this stylesheet has been defined.
+		 *                                         Default: 'all'.
+		 *         @type string $in_footer     (Optional) If JavaScript, set to true to enqueue file in the footer.
+		 *                                         Default: true.
+		 *     }
+		 * }
+		 *
 		 * @return void
 		 */
-		public function __construct() {
-			$this->debug = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? true : false;
-			$this->min   = ( ! $this->debug ) ? '.min' : '';
-
-			$this->hooks();
+		public function __construct( $args = array() ) {
+			parent::__construct( $args );
 		}
 
 		/**
@@ -66,50 +62,21 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		 * @return void
 		 */
 		public function hooks() {
-			add_action( 'wp_enqueue_scripts', array( $this, 'theme_base_styles' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 		}
 
 		/**
-		 * Stylesheet Version.
-		 *
-		 * @author Theme_Author
-		 * @since  1.0.0
-		 *
-		 * @param string $file           The file to enqueue.
-		 * @param int    $custom_version The custom stylesheet version.
-		 *
-		 * @return int
-		 */
-		public function stylesheet_version( $file, $custom_version = '' ) {
-
-			// Bail if file is not set.
-			if ( ! $file ) {
-				return '1.0.0';
-			}
-
-			// If custom version is set return it.
-			if ( $custom_version ) {
-				return $custom_version;
-			}
-
-			$cache_buster  = filemtime( trailingslashit( get_stylesheet_directory() ) . $file );
-			$theme_version = wp_get_theme()->get( 'Version' );
-			$version       = ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ? $cache_buster : $theme_version;
-
-			return $version;
-		}
-
-		/**
-		 * Theme Base Styles.
+		 * Enqueue Styles.
 		 *
 		 * @author Theme_Author
 		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
-		public function theme_base_styles() {
-			$file  = 'style' . $this->min . '.css';
-			wp_enqueue_style( 'Theme_Textdomain-style', trailingslashit( get_stylesheet_directory_uri() ) . $file, array(), $this->stylesheet_version( $file ) );
+		public function enqueue() {
+			foreach ( $this->args as $arg ) {
+				wp_enqueue_style( $arg['handle'], $arg['scr'], $arg['dependencies'], $arg['version'], $arg['media'] );
+			}
 		}
 	}
 }
