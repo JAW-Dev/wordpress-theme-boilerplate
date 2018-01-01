@@ -1,17 +1,29 @@
 <?php
 /**
+ * Find Replace
+ *
+ * Theme_Name
+ * Theme_Package
+ * Theme_URI
+ * Theme_Description
+ * Theme_Textdomain
+ * Theme_Author
+ * Theme_Author_Email
+ * Theme_Author_URL
+ *
+ *
  * Functions.php
  *
- * @package   {{theme-package}}
- * @author    {{theme-author}} <{{theme-author-email}}>
- * @copyright Copyright (c) {{year}}, {{theme-author}}
+ * @package   Theme_Package
+ * @author    Theme_Author <Theme_Author_Email>
+ * @copyright Copyright (c) 2018, Theme_Author
  * @license   GNU General Public License v2 or later
- * @since     {{theme-version}}
+ * @since     1.0.0
  */
 
-namespace Theme_Namespace;
+namespace Theme_Package;
 
-use Theme_Namespace\Includes\Classes as Classes;
+use Theme_Package\Includes\Classes as Classes;
 
 /*
  * Autoloader
@@ -26,8 +38,8 @@ require_once trailingslashit( get_stylesheet_directory() ) . trailingslashit( 'i
 /**
  * Custom theme setup filter.
  *
- * @author {{theme-author}}
- * @since  {{theme-version}}
+ * @author Theme_Author
+ * @since  1.0.0
  *
  * @param array The theme setup arguments.
  */
@@ -36,8 +48,8 @@ $args = apply_filters( 'custom_theme_setup', array(
 	/**
 	 * Add theme support filter.
 	 *
-	 * @author {{theme-author}}
-	 * @since  {{theme-version}}
+	 * @author Theme_Author
+	 * @since  1.0.0
 	 *
 	 * @param array Add theme support.
 	 *
@@ -72,8 +84,8 @@ $args = apply_filters( 'custom_theme_setup', array(
 	/**
 	 * Add custom image sizes filter.
 	 *
-	 * @author {{theme-author}}
-	 * @since  {{theme-version}}
+	 * @author Theme_Author
+	 * @since  1.0.0
 	 *
 	 * @param array Add custom image sizes.
 	 *
@@ -89,15 +101,15 @@ $args = apply_filters( 'custom_theme_setup', array(
 	/**
 	 * Register nav menus filter.
 	 *
-	 * @author {{theme-author}}
-	 * @since  {{theme-version}}
+	 * @author Theme_Author
+	 * @since  1.0.0
 	 *
 	 * @param array Register nav menus.
 	 *
-	 * @example 'primary-menu' => __( 'Primary Menu', '{{theme-textdomain}}' )
+	 * @example 'primary-menu' => __( 'Primary Menu', 'Theme_Textdomain' )
 	 */
 	'register_nav_menus' => apply_filters( 'custom_register_nav_menus', array(
-		'primary-menu' => __( 'Primary Menu', '{{theme-textdomain}}' ),
+		'primary-menu' => __( 'Primary Menu', 'Theme_Textdomain' ),
 	) ),
 ) );
 
@@ -110,8 +122,8 @@ $setup = new Classes\Setup( $args );
 /**
  * Register Widget Areas.
  *
- * @author {{theme-author}}
- * @since  {{theme-version}}
+ * @author Theme_Author
+ * @since  1.0.0
  *
  * @param array $args {
  *     Array of register widget areas arguments.
@@ -140,7 +152,7 @@ $args = apply_filters( 'custom_register_widget_areas',
 	array(
 		array(
 			'id'   => 'primary',
-			'name' => __( 'Primary Sidebar', '{{theme-textdomain}}' ),
+			'name' => __( 'Primary Sidebar', 'Theme_Textdomain' ),
 		),
 	)
 );

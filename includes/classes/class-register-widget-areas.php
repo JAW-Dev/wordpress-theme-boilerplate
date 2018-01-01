@@ -2,31 +2,31 @@
 /**
  * Register Widget Areas.
  *
- * @package    {{theme-package}}
- * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme-author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme-author}}
+ * @package    Theme_Package
+ * @subpackage Theme_Package/Includes/Classes
+ * @author     Theme_Author <Theme_Author_Email>
+ * @copyright  Copyright (c) 2018, Theme_Author
  * @license    GNU General Public License v2 or later
- * @version    {{theme-version}}
+ * @version    1.0.0
  */
 
-namespace Theme_Namespace\Includes\Classes;
+namespace Theme_Package\Includes\Classes;
 
 if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 
 	/**
 	 * Register Widget Areas.
 	 *
-	 * @author {{theme-author}}
-	 * @since  {{theme-version}}
+	 * @author Theme_Author
+	 * @since  1.0.0
 	 */
 	class Register_Widget_Areas {
 
 		/**
 		 * Widgets.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @var array
 		 */
@@ -35,8 +35,8 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @param array $args {
 		 *     Array of register widget areas arguments.
@@ -75,7 +75,7 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 		 * Arguments.
 		 *
 		 * @author Jason Witt
-		 * @since  0.0.1
+		 * @since  1.0.0
 		 *
 		 * @param array|string $args {
 		 *     Array or string of arguments for the sidebar being registered.
@@ -120,7 +120,7 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 					'id'            => $widget['id'],
 					'name'          => $widget['name'],
 					// Translators: The widget name.
-					'description'   => sprintf( __( 'Widget area for the %s', '{{theme-textdomain}}' ), $widget['name'] ),
+					'description'   => sprintf( __( 'Widget area for the %s', 'Theme_Textdomain' ), $widget['name'] ),
 					'class'         => '',
 					'before_widget' => '<aside class="widget %2$s">',
 					'after_widget'  => '</aside>',
@@ -138,8 +138,8 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 		/**
 		 * Hooks.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
@@ -150,8 +150,8 @@ if ( ! class_exists( 'Register_Widget_Areas' ) ) {
 		/**
 		 * Register Widget Areas.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */

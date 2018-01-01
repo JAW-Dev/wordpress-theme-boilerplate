@@ -2,12 +2,13 @@
 /**
  * Header
  *
- * @package   {{theme-package}}
- * @author    {{theme-author}} <{{theme-author-email}}>
- * @copyright Copyright (c) {{year}}, {{theme-author}}
+ * @package   Theme_Package
+ * @author    Theme_Author <Theme_Author_Email>
+ * @copyright Copyright (c) 2018, Theme_Author
  * @license   GNU General Public License v2 or later
- * @version   {{theme-version}}
+ * @version   1.0.0
  */
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -24,7 +25,7 @@
 <?php do_action( 'before_body' ); ?>
 <body <?php body_class(); ?>>
 	<?php do_action( 'after_body_open' ); ?>
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '{{theme-textdomain}}' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'Theme_Textdomain' ); ?></a>
 	<?php get_template_part( 'template-parts/header', 'main' ); ?>
 	<?php do_action( 'before_main' ); ?>
 	<main id="main" class="main" role="main">

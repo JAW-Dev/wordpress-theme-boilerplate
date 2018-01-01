@@ -2,22 +2,22 @@
 /**
  * Autoloader
  *
- * @package    {{theme-package}}
- * @subpackage {{theme-package}}/Includes
- * @author     {{theme-author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme-author}}
+ * @package    Theme_Package
+ * @subpackage Theme_Package/Includes
+ * @author     Theme_Author <Theme_Author_Email>
+ * @copyright  Copyright (c) 2018, Theme_Author
  * @license    GNU General Public License v2 or later
- * @version    {{theme-version}}
+ * @version    1.0.0
  */
 
-namespace Theme_Namespace\Includes;
+namespace Theme_Package\Includes;
 
 /**
  * Autoloader
  *
  * @param string $class Name of the class being requested.
  *
- * @since {{theme-version}}
+ * @since 1.0.0
  *
  * @return void
  */

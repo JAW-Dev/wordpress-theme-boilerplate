@@ -1,9 +1,11 @@
 /**
  * Compile Styles.
  *
- * @package Boilderplate
- *
- * @since 1.0.0
+ * @package   Theme_Package
+ * @author    Theme_Author <Theme_Author_Email>
+ * @copyright Copyright (c) 2018, Theme_Author
+ * @license   GNU General Public License v2 or later
+ * @version   1.0.0
  */
 
 /* global autoprefixer, cssnano, del, files, gulp, handleErrors, mqpacker, paths, plumber, postcss, rename, sass, sourcemaps */
@@ -30,7 +32,7 @@ gulp.task( 'compileStyles', [ 'cleanStyles' ], () =>
 		.pipe(
 			postcss([
 				autoprefixer({'browsers': [ 'last 2 version' ]}),
-				mqpacker({'sort': true})
+				mqpacker({'sort': true}),
 			]) )
 		.pipe( sourcemaps.write() )
 		.pipe( gulp.dest( paths.styles ) )

@@ -2,31 +2,31 @@
 /**
  * Setup
  *
- * @package    {{theme-package}}
- * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme-author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme-author}}
+ * @package    Theme_Package
+ * @subpackage Theme_Package/Includes/Classes
+ * @author     Theme_Author <Theme_Author_Email>
+ * @copyright  Copyright (c) 2018, Theme_Author
  * @license    GNU General Public License v2 or later
- * @version    {{theme-version}}
+ * @version    1.0.0
  */
 
-namespace Theme_Namespace\Includes\Classes;
+namespace Theme_Package\Includes\Classes;
 
 if ( ! class_exists( 'Setup' ) ) {
 
 	/**
 	 * Name
 	 *
-	 * @author {{theme-author}}
-	 * @since  {{theme-version}}
+	 * @author Theme_Author
+	 * @since  1.0.0
 	 */
 	class Setup {
 
 		/**
 		 * Arguments.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @var array
 		 */
@@ -35,8 +35,8 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @param array $args The array of setup arguments.
 		 *
@@ -68,7 +68,7 @@ if ( ! class_exists( 'Setup' ) ) {
 		 * Initiate.
 		 *
 		 * @author Jason Witt
-		 * @since  0.0.1
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
@@ -84,20 +84,20 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Load textdomain.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
 		public function load_textdomain() {
-			load_theme_textdomain( '{{theme-textdomain}}', get_template_directory() . '/languages' );
+			load_theme_textdomain( 'Theme_Textdomain', get_template_directory() . '/languages' );
 		}
 
 		/**
 		 * Add Theme support.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
@@ -127,8 +127,8 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Add Image Size.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
@@ -157,8 +157,8 @@ if ( ! class_exists( 'Setup' ) ) {
 		/**
 		 * Register Nav Menus.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */

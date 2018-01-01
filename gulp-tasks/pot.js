@@ -1,9 +1,11 @@
 /**
  * Generate .po file for translatable text.
  *
- * @package Boilderplate
- *
- * @since 1.0.0
+ * @package   Theme_Package
+ * @author    Theme_Author <Theme_Author_Email>
+ * @copyright Copyright (c) 2018, Theme_Author
+ * @license   GNU General Public License v2 or later
+ * @version   1.0.0
  */
 
 /* global del, files, getPackageJson, gulp, handleErrors, plumber, sort, wpPot */
@@ -14,7 +16,7 @@ var pkg    = getPackageJson(),
 /**
  * Delete the theme's .pot before we create a new one.
  *
- * @since 1.0.
+ * @since 1.0.0
  */
 gulp.task( 'cleanPot', () =>
 	del([ 'languages/' + domain + '.pot' ])
@@ -31,7 +33,7 @@ gulp.task( 'pot', [ 'cleanPot' ], () =>
 		.pipe( sort() )
 		.pipe( wpPot({
 			'domain': domain,
-			'package': domain
+			'package': domain,
 		}) )
 		.pipe( gulp.dest( 'languages/' + domain + '.pot' ) )
 );

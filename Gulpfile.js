@@ -1,9 +1,11 @@
 /*
- * Gulp Tasks.
+ * Gulp.
  *
- * @package Boilderplate
- *
- * @since 1.0.0
+ * @package   Theme_Package
+ * @author    Theme_Author <Theme_Author_Email>
+ * @copyright Copyright (c) 2018, Theme_Author
+ * @license   GNU General Public License v2 or later
+ * @version   1.0.0
  */
 
 /* global require */
@@ -41,7 +43,7 @@ paths        = {
 	'images': 'assets/images',
 	'scripts': 'assets/scripts',
 	'sass': 'assets/styles/sass',
-	'dist': './dist'
+	'dist': './dist',
 },
 files = {
 	'css': paths.styles + '/*.css',
@@ -54,7 +56,7 @@ files = {
 	'jsmin': paths.scripts + '/*.min.js',
 	'php': [ './*.php', './**/*.php' ],
 	'sass': paths.sass + '/**/*.scss',
-	'styles': paths.styles + '/style.css'
+	'styles': paths.styles + '/style.css',
 },
 dist = [
 	'./**/*',
@@ -86,7 +88,7 @@ dist = [
 	'!phpcs.xml',
 	'!phpmd.xml',
 	'!phpunit.xml',
-	'!yarn.lock'
+	'!yarn.lock',
 ],
 getPackageJson = () => { // Get the package.json file content
 	return JSON.parse( fs.readFileSync( './package.json', 'utf8' ) );
@@ -95,7 +97,7 @@ handleErrors = ( err ) => { // Handle the errors.
 	notify.onError({
 		title: 'Error!',
 		message: '<%= error.message %>',
-		sound: 'Beep'
+		sound: 'Beep',
 	})( err );
 	return plumber();
 };

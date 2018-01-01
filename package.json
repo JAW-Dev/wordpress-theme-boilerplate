@@ -1,8 +1,8 @@
 {
-	"name": "{{theme-author}}/{{theme-name}}",
-	"author": "{{theme-author}}",
-	"description": "{{theme-description}}",
-	"version": "{{theme-version}}",
+	"name": "Theme_Name",
+	"author": "Theme_Author",
+	"description": "Theme_Description",
+	"version": "1.0.0",
 	"license": "GNU General Public License v2 or later",
 	"main": "Gulpfile.js",
 	"scripts": {

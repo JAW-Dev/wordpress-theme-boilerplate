@@ -1,9 +1,11 @@
 /**
  * Compile Scripts.
  *
- * @package Boilderplate
- *
- * @since 1.0.0
+ * @package   Theme_Package
+ * @author    Theme_Author <Theme_Author_Email>
+ * @copyright Copyright (c) 2018, Theme_Author
+ * @license   GNU General Public License v2 or later
+ * @version   1.0.0
  */
 
 /* global babel, concat, files, gulp, handleErrors, paths, plumber, sourcemaps, rename, uglify */

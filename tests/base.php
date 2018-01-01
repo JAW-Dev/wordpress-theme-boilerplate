@@ -2,21 +2,23 @@
 /**
  * Base Test Class.
  *
- * {{theme-description}}
- *
- * @package   {{theme-package}}
- * @author    {{theme-author}} <{{theme-author-email}}>
- * @copyright Copyright (c) {{year}}, {{theme-author}}
- * @license   GNU General Public License v2 or later
- * @version   {{theme-version}}
+ * @package    Theme_Package
+ * @subpackage Theme_Package/Tests
+ * @author     Theme_Author <Theme_Author_Email>
+ * @copyright  Copyright (c) 2018, Theme_Author
+ * @license    GNU General Public License v2 or later
+ * @version    1.0.0
  */
 
+/**
+ * Base Unit Test Case
+ */
 abstract class Base_UnitTestCase extends WP_UnitTestCase {
 
 	/**
 	 * File.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @var strinf
 	 */
@@ -25,7 +27,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Class Object.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @var obnject
 	 */
@@ -34,7 +36,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Class name.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @var string
 	 */
@@ -43,7 +45,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Methods.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @var array
 	 */
@@ -52,7 +54,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Properties.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @var array
 	 */
@@ -61,7 +63,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Initialize the class
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 *
 	 * @return string
 	 */
@@ -72,7 +74,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Test if file file exists.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
@@ -87,7 +89,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Test if class exists.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	public function test_class_exists() {
 
@@ -100,7 +102,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Test if methods exist.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
@@ -117,7 +119,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Test if wp_roles property exists.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
@@ -134,7 +136,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Set Property.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 *
 	 * @param object $object   The class object.
 	 * @param string $property The name of the property to set.
@@ -152,7 +154,7 @@ abstract class Base_UnitTestCase extends WP_UnitTestCase {
 	/**
 	 * Invoke Private Method.
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 *
 	 * @param object $object      The class object.
 	 * @param string $method_name The name of the method to invoke.

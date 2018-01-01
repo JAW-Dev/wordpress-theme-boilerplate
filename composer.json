@@ -1,11 +1,11 @@
 {
-	"name": "{{theme-author}}/{{theme-name}}",
-	"description": "{{theme-description}}",
+	"name": "Theme_Package",
+	"description": "Theme_Description",
 	"license": "GNU General Public License v2 or later",
 	"authors": [
 		{
-			"name": "{{theme-author}}",
-			"email": "{{theme-author-email}}"
+			"name": "Theme_Author",
+			"email": "Theme_Author_Email"
 		}
 	],
 	"require": {},

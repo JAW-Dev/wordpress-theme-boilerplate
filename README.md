@@ -1,2 +1,2 @@
-# {{theme-name}}
-{{theme-description}}
+# Theme_Package
+Theme_Description

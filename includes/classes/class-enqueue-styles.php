@@ -2,31 +2,31 @@
 /**
  * Enqueue Styles.
  *
- * @package    {{theme-package}}
- * @subpackage {{theme-package}}/Includes/Classes
- * @author     {{theme-author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme-author}}
+ * @package    Theme_Package
+ * @subpackage Theme_Package/Includes/Classes
+ * @author     Theme_Author <Theme_Author_Email>
+ * @copyright  Copyright (c) 2018, Theme_Author
  * @license    GNU General Public License v2 or later
- * @version    {{theme-version}}
+ * @version    1.0.0
  */
 
-namespace Theme_Namespace\Includes\Classes;
+namespace Theme_Package\Includes\Classes;
 
 if ( ! class_exists( 'Enqueue_Styles' ) ) {
 
 	/**
 	 * Enqueue Styles
 	 *
-	 * @author {{theme-author}}
-	 * @since  0.0.1
+	 * @author Theme_Author
+	 * @since  1.0.0
 	 */
 	class Enqueue_Styles {
 
 		/**
 		 * Debug.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @var boolean
 		 */
@@ -35,8 +35,8 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Minified File.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @var string
 		 */
@@ -45,8 +45,8 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Initialize the class
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
@@ -60,8 +60,8 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Hooks.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
@@ -72,8 +72,8 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Stylesheet Version.
 		 *
-		 * @author {{theme-author}}
-		 * @since  {{theme-version}}
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @param string $file           The file to enqueue.
 		 * @param int    $custom_version The custom stylesheet version.
@@ -84,7 +84,7 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 
 			// Bail if file is not set.
 			if ( ! $file ) {
-				return '0.0.1';
+				return '1.0.0';
 			}
 
 			// If custom version is set return it.
@@ -102,14 +102,14 @@ if ( ! class_exists( 'Enqueue_Styles' ) ) {
 		/**
 		 * Theme Base Styles.
 		 *
-		 * @author {{theme-author}}
-		 * @since  0.0.1
+		 * @author Theme_Author
+		 * @since  1.0.0
 		 *
 		 * @return void
 		 */
 		public function theme_base_styles() {
 			$file  = 'style' . $this->min . '.css';
-			wp_enqueue_style( '{{theme-textdomain}}-style', trailingslashit( get_stylesheet_directory_uri() ) . $file, array(), $this->stylesheet_version( $file ) );
+			wp_enqueue_style( 'Theme_Textdomain-style', trailingslashit( get_stylesheet_directory_uri() ) . $file, array(), $this->stylesheet_version( $file ) );
 		}
 	}
 }

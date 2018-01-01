@@ -2,17 +2,16 @@
 /**
  * Single
  *
- * {{theme-description}}
- *
- * @package   {{theme-package}}
- * @author    {{theme-author}} <{{theme-author-email}}>
- * @copyright Copyright (c) {{year}}, {{theme-author}}
+ * @package   Theme_Package
+ * @author    Theme_Author <Theme_Author_Email>
+ * @copyright Copyright (c) 2018, Theme_Author
  * @license   GNU General Public License v2 or later
- * @version   {{theme-version}}
+ * @version   1.0.0
  */
 
 get_header();
-while ( have_posts() ) : the_post();
+while ( have_posts() ) :
+	the_post();
 	get_template_part( 'template-parts/content', get_post_format() );
 	the_post_navigation();
 	if ( comments_open() || get_comments_number() ) :

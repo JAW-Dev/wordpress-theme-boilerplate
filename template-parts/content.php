@@ -2,12 +2,12 @@
 /**
  * Content
  *
- * @package    {{theme-package}}
- * @subpackage {{theme-package}}/Template_Parts
- * @author     {{theme-author}} <{{theme-author-email}}>
- * @copyright  Copyright (c) {{year}}, {{theme-author}}
+ * @package    Theme_Package
+ * @subpackage Theme_Package/Template_Parts
+ * @author     Theme_Author <Theme_Author_Email>
+ * @copyright  Copyright (c) 2018, Theme_Author
  * @license    GNU General Public License v2 or later
- * @version    {{theme-version}}
+ * @version    1.0.0
  */
 
 ?>
@@ -43,7 +43,7 @@
 		<?php
 			the_content( wp_dl_content_more_text() );
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '{{theme-textdomain}}' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Theme_Textdomain' ),
 				'after'  => '</div>',
 			) );
 		?>
