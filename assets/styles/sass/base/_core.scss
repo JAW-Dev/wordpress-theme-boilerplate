@@ -4,10 +4,10 @@
 html {
 	@include font-legibility;
 	@include font-smoothing;
+	@include z-index("base");
 	background-color: $color-background-body;
 	color: $color-text-main;
 	font-size: $font-size-base + px;
-	@include z-index("base");
 }
 
 body {

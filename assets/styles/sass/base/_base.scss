@@ -4,7 +4,7 @@
 html {
 	@include font-legibility;
 	@include font-smoothing;
-	background-color: $snow;
+	background-color: $mineshaft;
 	color: $color-base-font;
 	font-size: $font-size-base + px;
 }
