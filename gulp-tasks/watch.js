@@ -16,7 +16,7 @@
  * @since 1.0.0
  */
 gulp.task( 'watch', () => {
-  gulp.watch( files.sass, [ 'styles' ]);
-  gulp.watch( files.concatScripts, [ 'scripts' ]);
-  gulp.watch( files.images, [ 'imagemin' ]);
+	gulp.watch( files.sass, [ 'styles' ]);
+	gulp.watch( files.concatScripts, [ 'scripts' ]);
+	gulp.watch( files.images, [ 'imagemin' ]);
 });
