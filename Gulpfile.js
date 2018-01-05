@@ -26,6 +26,7 @@ fs           = require( 'fs' );
 gulp         = require( 'gulp' );
 gulpUtil     = require( 'gulp-util' );
 imagemin     = require( 'gulp-imagemin' );
+livereload   = require( 'gulp-livereload' );
 mqpacker     = require( 'css-mqpacker' );
 notify       = require( 'gulp-notify' );
 plumber      = require( 'gulp-plumber' );

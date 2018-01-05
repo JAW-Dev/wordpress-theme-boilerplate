@@ -8,7 +8,7 @@
  * @version   1.0.0
  */
 
-/* global files, gulp */
+/* global files, gulp, livereload */
 
 /**
  * Watch
@@ -16,6 +16,7 @@
  * @since 1.0.0
  */
 gulp.task( 'watch', () => {
+	livereload.listen();
 	gulp.watch( files.sass, [ 'styles' ]);
 	gulp.watch( files.concatScripts, [ 'scripts' ]);
 	gulp.watch( files.images, [ 'imagemin' ]);

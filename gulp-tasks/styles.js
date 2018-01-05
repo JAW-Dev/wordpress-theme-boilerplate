@@ -8,7 +8,7 @@
  * @version   1.0.0
  */
 
-/* global autoprefixer, cssnano, del, files, gulp, handleErrors, mqpacker, paths, plumber, postcss, rename, sass, sourcemaps */
+/* global autoprefixer, cssnano, del, files, gulp, handleErrors, livereload, mqpacker, paths, plumber, postcss, rename, sass, sourcemaps */
 
 /**
  * Delete style.css and style.min.css before we minify and optimize
@@ -36,6 +36,7 @@ gulp.task( 'compileStyles', [ 'cleanStyles' ], () =>
 			]) )
 		.pipe( sourcemaps.write() )
 		.pipe( gulp.dest( paths.styles ) )
+		.pipe( livereload() )
 	);
 
 /**
@@ -49,6 +50,7 @@ gulp.src( files.styles )
 	.pipe( cssnano({'safe': true, discardComments: {removeAll: true}}) )
 	.pipe( rename( 'style.min.css' ) )
 	.pipe( gulp.dest( paths.styles ) )
+	.pipe( livereload() )
 );
 
 /**

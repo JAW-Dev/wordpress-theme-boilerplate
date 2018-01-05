@@ -23,6 +23,7 @@
 		"gulp-cssnano": "latest",
 		"gulp-eslint": "latest",
 		"gulp-imagemin": "latest",
+		"gulp-livereload": "latest",
 		"gulp-notify": "latest",
 		"gulp-plumber": "latest",
 		"gulp-postcss": "latest",
