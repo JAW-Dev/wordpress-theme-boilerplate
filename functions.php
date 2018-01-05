@@ -195,9 +195,8 @@ $args = array(
 );
 $enqueue_styles = new Classes\Enqueue_Styles( $args );
 
-
 /*
  * Template Tags
  * ----------------------------------------
  */
-$template_tags = new Classes\Template_Tags( 'includes/functions' );
+$template_tags = new Classes\Template_Tags( trailingslashit( get_stylesheet_directory() ) . trailingslashit( 'includes/functions' ) );
