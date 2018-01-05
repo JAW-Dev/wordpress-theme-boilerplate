@@ -17,7 +17,7 @@
 	</header><!-- .entry-header -->
 	<div class="entry__content">
 		<?php
-			the_content( do_content_read_more() );
+			the_content( wp_dl_content_more_text() );
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Theme_Textdomain' ),
 				'after'  => '</div>',

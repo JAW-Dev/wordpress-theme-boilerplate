@@ -19,9 +19,9 @@
 		?>
 			<div class="header__meta">
 				<?php
-				do_post_published();
-				do_post_updated();
-				do_author_byline();
+				wp_dl_post_published();
+				wp_dl_post_updated();
+				wp_dl_post_author_byline();
 				?>
 			</div><!-- /.header__meta -->
 		<?php endif; ?>
