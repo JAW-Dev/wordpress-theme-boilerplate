@@ -2,7 +2,8 @@
 /**
  * Example Function.
  *
- * Load: true
+ * The function name should be "taxdomain"_"the file name"
+ * If you want the function to always be loaded include "Load: true" in this comment block.
  *
  * @package    Theme_Package
  * @subpackage Theme_Package/Includes/Classes
@@ -19,9 +20,9 @@ if ( ! function_exists( 'Theme_Textdomain_example' ) ) {
 	 * @author Jason Witt
 	 * @since  1.0.0
 	 *
-	 * @return string
+	 * @return void
 	 */
 	function Theme_Textdomain_example() {
-		return 'This is an example function template tag';
+		echo 'This is an example function template tag';
 	}
 }
