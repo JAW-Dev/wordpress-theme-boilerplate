@@ -113,6 +113,11 @@ abstract class Enqueue_Abstract {
 	 * @return array
 	 */
 	public function defaults( $args = array() ) {
+
+		if ( empty( $args ) ) {
+			return;
+		}
+
 		$files    = array();
 		$defaults = array(
 			'handle'       => '',
