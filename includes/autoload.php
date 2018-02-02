@@ -42,15 +42,15 @@ function _autoload_classes( $class ) {
 		}
 
 		// Constructed file with full path to autoload.
-		$path  = trailingslashit( $filepath ) . 'class-' . strtolower( str_replace( '_', '-', end( $class ) ) ) . '.php';
+		$file_fullpath = trailingslashit( $filepath ) . 'class-' . strtolower( str_replace( '_', '-', end( $class ) ) ) . '.php';
 
 		// Add classes to be excluded from autoloading. example: array( $path . 'class-name.php' );.
-		$excludes  = array();
+		$excludes = array();
 
 		// Require file if the file exists and is not in the excludes list.
-		if ( file_exists( $path ) && ! in_array( $path, $excludes, true ) ) {
+		if ( file_exists( $file_fullpath ) && ! in_array( $file_fullpath, $excludes, true ) ) {
 
-			require_once( $path );
+			require_once( $file_fullpath );
 		}
 	}
 }
