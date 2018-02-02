@@ -27,16 +27,15 @@ function _autoload_classes( $class ) {
 	$class = explode( '\\', $class );
 
 	// Full path to the classes directory.
-	$path  = trailingslashit( plugin_dir_path( __FILE__ ) ) . trailingslashit( 'classes' );
-	$files  = new \RecursiveDirectoryIterator( trailingslashit( plugin_dir_path( __FILE__ ) ) . trailingslashit( 'classes' ) );
-	
-	
+	$path  = trailingslashit( get_template_directory() ) . trailingslashit( 'includes/classes' );
+	$files = new \RecursiveDirectoryIterator( $path );
+
 	// Loop through the files.
 	foreach ( new \RecursiveIteratorIterator( $files ) as $file ) {
-		
+
 		$filename = $file->getFilename();
 		$filepath = $file->getPath();
-		
+
 		// Exclude dot files.
 		if ( '.' === substr( $filename, 0, 1 ) ) {
 			continue;
