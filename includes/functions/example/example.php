@@ -6,7 +6,7 @@
  * If you want the function to always be loaded include "Load: true" in this comment block.
  *
  * @package    Theme_Package
- * @subpackage Theme_Package/Includes/Classes
+ * @subpackage Theme_Package/Includes/Functions
  * @author     Theme_Author <Theme_Author_Email>
  * @copyright  Copyright (c) 2018, Theme_Author
  * @license    GNU General Public License v2 or later
