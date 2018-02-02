@@ -29,7 +29,7 @@ use Theme_Package\Includes\Classes as Classes;
  * Autoloader
  * ----------------------------------------
  */
-require_once trailingslashit( get_stylesheet_directory() ) . trailingslashit( 'includes' ) . 'autoload.php';
+require_once trailingslashit( get_template_directory() ) . trailingslashit( 'includes' ) . 'autoload.php';
 
 /*
  * Setup
