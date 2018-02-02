@@ -12,7 +12,7 @@
 
 namespace Theme_Package\Includes\Classes;
 
-if ( ! class_exists( 'Call_Template_Function' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 
 	/**
 	 * Enqueue Styles

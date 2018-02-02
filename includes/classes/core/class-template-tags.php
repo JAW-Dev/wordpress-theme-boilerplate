@@ -12,7 +12,7 @@
 
 namespace Theme_Package\Includes\Classes;
 
-if ( ! class_exists( 'Template_Tags' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\\Template_Tags' ) ) {
 
 	/**
 	 * Load Template Tag Functions.

@@ -12,7 +12,7 @@
 
 namespace Theme_Package\Includes\Classes;
 
-if ( ! class_exists( 'Register_Widget_Areas' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\\Register_Widget_Areas' ) ) {
 
 	/**
 	 * Register Widget Areas.

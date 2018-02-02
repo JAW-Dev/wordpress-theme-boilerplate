@@ -12,7 +12,7 @@
 
 namespace Theme_Package\Includes\Classes;
 
-if ( ! class_exists( 'Setup' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\\Setup' ) ) {
 
 	/**
 	 * Name

@@ -12,7 +12,7 @@
 
 namespace Theme_Package\Includes\Classes;
 
-if ( ! class_exists( 'Enqueue_Scripts' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\\Enqueue_Scripts' ) ) {
 
 	/**
 	 * Enqueue Styles
