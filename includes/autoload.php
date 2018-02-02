@@ -15,9 +15,10 @@ namespace Theme_Package\Includes;
 /**
  * Autoloader
  *
- * @param string $class Name of the class being requested.
+ * @author Plugin_Author
+ * @since  1.0.0
  *
- * @since 1.0.0
+ * @param string $class Name of the class being requested.
  *
  * @return void
  */
