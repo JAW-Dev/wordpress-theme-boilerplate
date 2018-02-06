@@ -7,6 +7,7 @@
  * Theme_URI
  * Theme_Description
  * Theme_Textdomain
+ * Theme_Prefix
  * Theme_Author
  * Theme_Author_Email
  * Theme_Author_URL

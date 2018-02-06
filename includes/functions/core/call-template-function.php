@@ -12,7 +12,7 @@
  * @version    1.0.0
  */
 
-if ( ! function_exists( 'Theme_Textdomain_call_template_function' ) ) {
+if ( ! function_exists( 'Theme_Prefix_call_template_function' ) ) {
 	/**
 	 * Example Function.
 	 *
@@ -24,7 +24,7 @@ if ( ! function_exists( 'Theme_Textdomain_call_template_function' ) ) {
 	 *
 	 * @return string
 	 */
-	function Theme_Textdomain_call_template_function( $callback, ...$args ) {
+	function Theme_Prefix_call_template_function( $callback, ...$args ) {
 		$call_template_function = new Theme_Package\Includes\Classes\Call_Template_Function();
 		return $call_template_function->init( $callback, $args );
 	}

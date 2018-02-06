@@ -13,7 +13,7 @@
  * @version    1.0.0
  */
 
-if ( ! function_exists( 'Theme_Textdomain_example' ) ) {
+if ( ! function_exists( 'Theme_Prefix_example' ) ) {
 	/**
 	 * Example Function.
 	 *
@@ -22,7 +22,7 @@ if ( ! function_exists( 'Theme_Textdomain_example' ) ) {
 	 *
 	 * @return void
 	 */
-	function Theme_Textdomain_example() {
+	function Theme_Prefix_example() {
 		echo 'This is an example function template tag';
 	}
 }
