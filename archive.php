@@ -9,6 +9,10 @@
  * @version   1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 $format = get_post_format() ? : 'standard';
 get_header();
 if ( have_posts() ) :

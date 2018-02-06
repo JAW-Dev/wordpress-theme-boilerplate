@@ -9,6 +9,10 @@
  * @version   1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 get_header();
 if ( have_posts() ) :
 	while ( have_posts() ) :

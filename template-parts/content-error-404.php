@@ -10,6 +10,10 @@
  * @version    1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 ?>
 <section class="error-404">
 	<header class="error-404__header section-header">

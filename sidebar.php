@@ -9,6 +9,10 @@
  * @version   1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 if ( ! is_active_sidebar( 'primary' ) ) {
 	return;
 }

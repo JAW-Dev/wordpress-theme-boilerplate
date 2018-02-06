@@ -9,12 +9,19 @@
  * @version   1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 get_header();
 if ( have_posts() ) :
 	?>
 	<header class="page__header">
 		<h1 class="header__title">
-			<?php printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?>
+			<?php
+			/* translators: search results */
+			printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' );
+			?>
 		</h1>
 	</header><!-- /.page__header -->
 	<?php

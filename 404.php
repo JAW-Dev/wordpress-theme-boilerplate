@@ -9,6 +9,10 @@
  * @version   1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 get_header();
 get_template_part( 'template-parts/content-error', '404' );
 get_footer();

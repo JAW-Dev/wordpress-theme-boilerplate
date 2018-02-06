@@ -12,6 +12,10 @@
 
 namespace Theme_Package\Includes\Classes;
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 if ( ! class_exists( __NAMESPACE__ . '\\Setup' ) ) {
 
 	/**

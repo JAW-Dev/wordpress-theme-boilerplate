@@ -10,6 +10,10 @@
  * @version    1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 ?>
 <nav id="main-navigation" class="main-navigation" role="navigation">
 	<?php

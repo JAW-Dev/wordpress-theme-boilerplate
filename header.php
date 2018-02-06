@@ -9,6 +9,9 @@
  * @version   1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

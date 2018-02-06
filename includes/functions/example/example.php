@@ -13,6 +13,10 @@
  * @version    1.0.0
  */
 
+ if ( ! defined( 'WPINC' ) ) {
+	 wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+ }
+
 if ( ! function_exists( 'Theme_Prefix_example' ) ) {
 	/**
 	 * Example Function.

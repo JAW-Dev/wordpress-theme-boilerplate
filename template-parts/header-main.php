@@ -10,6 +10,10 @@
  * @version    1.0.0
  */
 
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
+
 $name        = get_bloginfo( 'name', 'display' );
 $description = get_bloginfo( 'description', 'display' );
 ?>
