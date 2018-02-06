@@ -17,7 +17,7 @@
 			<span class="copyright">
 				<?php
 				// Translators: Theme Name.
-				echo esc_html( sprintf( __( '{{theme-name}} &copy; %s', 'Theme_Textdomain' ), date( 'Y' ) ) );
+				echo esc_html( sprintf( __( '&copy; %s', 'Theme_Textdomain' ), date( 'Y' ) ) );
 				?>
 			</span>
 		</section><!-- / .site-footer__info -->
