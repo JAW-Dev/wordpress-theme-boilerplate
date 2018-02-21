@@ -165,7 +165,7 @@ abstract class Enqueue_Abstract {
 		$theme_version = wp_get_theme()->get( 'Version' );
 
 		// Bail if file is not set.
-		if ( null == $file ) {
+		if ( null === $file ) {
 			return $theme_version;
 		}
 
