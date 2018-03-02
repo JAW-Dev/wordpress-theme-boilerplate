@@ -40,7 +40,7 @@ if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 		 * Initialize.
 		 *
 		 * @author Jason Witt
-		 * @since  0.0.1
+		 * @since  1.0.0
 		 *
 		 * @param string $callback The function to callback.
 		 * @param mixed  ...$args  The arguments for the function.
@@ -49,7 +49,6 @@ if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 		 */
 		public function init( $callback, ...$args ) {
 			$this->include_file( $callback );
-
 			call_user_func( $callback, $args );
 		}
 
@@ -57,7 +56,7 @@ if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 		 * Scan the Directory.
 		 *
 		 * @author Jason Witt
-		 * @since  0.0.1
+		 * @since  1.0.0
 		 *
 		 * @param string $pattern The file to find.
 		 *
@@ -65,7 +64,7 @@ if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 		 */
 		public function include_file( $pattern ) {
 
-			if ( null == $pattern ) {
+			if ( null === $pattern ) {
 				return;
 			}
 
@@ -89,8 +88,7 @@ if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 				$extension = substr( $file, strrpos( $file, '.' ) + 1 );
 
 				// If 'Load' is true and the file is a PHP file.
-				if ( $filename == $pattern . '.php' ) {
-
+				if ( $filename === $pattern . '.php' ) {
 					include $file;
 				}
 			}
