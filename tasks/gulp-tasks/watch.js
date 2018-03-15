@@ -8,7 +8,7 @@
  * @version   1.0.0
  */
 
-/* global files, gulp, livereload */
+/* global browserSync, files, gulp, livereload */
 
 /**
  * Watch
@@ -16,7 +16,15 @@
  * @since 1.0.0
  */
 gulp.task( 'watch', () => {
-	livereload.listen();
+	browserSync.init([
+        files.sass,
+        files.js,
+		files.images,
+		files.html,
+		files.php,
+    ], {
+        proxy: 'https://wp-dev.test'
+    });
 	gulp.watch( files.sass, [ 'styles' ]);
 	gulp.watch( files.concatScripts, [ 'scripts' ]);
 	gulp.watch( files.images, [ 'imagemin' ]);

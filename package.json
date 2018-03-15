@@ -11,8 +11,10 @@
 	"devDependencies": {
 		"autoprefixer": "latest",
 		"babel-core": "latest",
+		"babel-loader": "latest",
 		"babel-preset-es2015": "latest",
-		"css-mqpacker": "latest",
+		"babel-preset-latest": "latest",
+		"browser-sync": "latest",
 		"del": "latest",
 		"eslint-config-wordpress": "latest",
 		"gulp": "latest",
@@ -23,7 +25,6 @@
 		"gulp-cssnano": "latest",
 		"gulp-eslint": "latest",
 		"gulp-imagemin": "latest",
-		"gulp-livereload": "latest",
 		"gulp-notify": "latest",
 		"gulp-plumber": "latest",
 		"gulp-postcss": "latest",
@@ -34,13 +35,15 @@
 		"gulp-sass-lint": "latest",
 		"gulp-sort": "latest",
 		"gulp-sourcemaps": "latest",
-		"gulp-uglify": "latest",
 		"gulp-util": "latest",
 		"gulp-watch": "latest",
 		"gulp-wp-pot": "latest",
 		"normalize-scss": "latest",
 		"require-dir": "latest",
 		"sass-mq": "latest",
+		"uglifyjs-webpack-plugin": "latest",
+		"webpack": "latest",
+		"webpack-stream": "latest",
 		"yargs": "latest"
 	}
 }
