@@ -37,12 +37,16 @@ gulp.task( 'concat', () =>
 		.pipe( gulp.dest( paths.scripts ) )
 );
 
+/**
+ * Webpack.
+ *
+ * @since 1.0.0
+ */
 gulp.task( 'webpack', [ 'concat' ], () => {
 	gulp.src( './' + paths.scripts + '/script.js' )
 		.pipe( webpackStream( webpackConfig ), webpack )
 		.pipe( gulp.dest( paths.scripts ) );
 });
-
 
 /**
   * Compile JavaScript.
