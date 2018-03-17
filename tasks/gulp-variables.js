@@ -18,6 +18,7 @@ cssnano        = require( 'gulp-cssnano' );
 del            = require( 'del' );
 fs             = require( 'fs' );
 gulp           = require( 'gulp' );
+gulpif         = require( 'gulp-if' );
 gulpUtil       = require( 'gulp-util' );
 imagemin       = require( 'gulp-imagemin' );
 notify         = require( 'gulp-notify' );
@@ -34,15 +35,16 @@ webpackStream  = require( 'webpack-stream' );
 wpPot          = require( 'gulp-wp-pot' );
 UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
 paths          = {
-	'styles': './',
-	'images': 'assets/images',
-	'scripts': 'assets/scripts',
-	'sass': 'assets/styles/sass',
+	'baseDir': './',
 	'dist': './dist',
+	'images': 'assets/images',
+	'sass': 'assets/styles/sass',
+	'scripts': 'assets/scripts',
+	'styles': 'assets/styles',
 };
 files = {
-	'css': paths.styles + '/*.css',
-	'cssmin': paths.styles + '/*.min.css',
+	'css': paths.baseDir + '/*.css',
+	'cssmin': paths.baseDir + '/*.min.css',
 	'concatScripts': paths.scripts + '/concat/*.js',
 	'html': [ './*.html', './**/*.html' ],
 	'images': paths.images + '/*',
@@ -51,7 +53,7 @@ files = {
 	'jsmin': paths.scripts + '/*.min.js',
 	'php': [ './*.php', './**/*.php' ],
 	'sass': paths.sass + '/**/*.scss',
-	'styles': paths.styles + '/style.css',
+	'styles': paths.baseDir + '/style.css',
 };
 dist = [
 	'./**/*',

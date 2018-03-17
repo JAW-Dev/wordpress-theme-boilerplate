@@ -23,7 +23,7 @@ gulp.task( 'watch', () => {
 		files.html,
 		files.php,
     ], {
-        proxy: 'https://wp-dev.test'
+        proxy: 'https://wp-dev.test',
     });
 	gulp.watch( files.sass, [ 'styles' ]);
 	gulp.watch( files.concatScripts, [ 'scripts' ]);

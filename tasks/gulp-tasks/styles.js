@@ -31,7 +31,7 @@ gulp.task( 'compileStyles', [ 'cleanStyles' ], () =>
 		.pipe( sass({'errLogToConsole': true, 'outputStyle': 'expanded'}) )
 		.pipe( postcss([ autoprefixer({'browsers': [ 'last 2 version' ]}) ]) )
 		.pipe( sourcemaps.write() )
-		.pipe( gulp.dest( paths.styles ) )
+		.pipe( gulp.dest( paths.baseDir ) )
 	);
 
 /**
@@ -44,7 +44,7 @@ gulp.src( files.styles )
 	.pipe( plumber({'errorHandler': handleErrors}) )
 	.pipe( cssnano({'safe': true, discardComments: {removeAll: true}}) )
 	.pipe( rename( 'style.min.css' ) )
-	.pipe( gulp.dest( paths.styles ) )
+	.pipe( gulp.dest( paths.baseDir ) )
 );
 
 /**

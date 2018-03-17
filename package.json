@@ -4,7 +4,7 @@
 	"description": "Theme_Description",
 	"version": "1.0.0",
 	"license": "GNU General Public License v2 or later",
-	"main": "Gulpfile.js",
+	"main": "gulpfile.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -24,6 +24,7 @@
 		"gulp-copy": "latest",
 		"gulp-cssnano": "latest",
 		"gulp-eslint": "latest",
+		"gulp-if": "latest",
 		"gulp-imagemin": "latest",
 		"gulp-notify": "latest",
 		"gulp-plumber": "latest",
