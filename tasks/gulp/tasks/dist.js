@@ -8,7 +8,10 @@
  * @version   1.0.0
  */
 
-/* global del, dist, gulp, handleErrors, paths, plumber */
+import { api, del, excludes, enviroment, files, gulp, gulpif, paths } from '../config/imports';
+
+const distDir = enviroment.paths.dist;
+const distExcludes =  enviroment.excludes;
 
 /**
  * Delete the dist directory.
@@ -16,7 +19,7 @@
  * @since 1.0.0
  */
 gulp.task( 'cleanDist', () =>
-	del([ paths.dist ])
+	del([ distDir ])
 );
 
  /**
@@ -25,9 +28,8 @@ gulp.task( 'cleanDist', () =>
   * @since 1.0.0
   */
 gulp.task( 'copy', [ 'cleanDist' ], () =>
-	gulp.src( dist )
-		.pipe( plumber({'errorHandler': handleErrors}) )
-		.pipe( gulp.dest( paths.dist ) )
+	gulp.src( distExcludes )
+		.pipe( gulp.dest( distDir ) )
 );
 
 /**
