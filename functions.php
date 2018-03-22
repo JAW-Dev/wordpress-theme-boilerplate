@@ -192,8 +192,14 @@ $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 
 $args = array(
 	array(
-		'handle'       => 'Theme_Textdomain-style',
+		'handle'       => 'Theme_Textdomain-theme',
 		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'style' . Classes\Enqueue_Styles::$min . '.css',
+		'dependencies' => array(),
+		'version'      => Classes\Enqueue_Styles::version( 'style' . Classes\Enqueue_Styles::$min . '.css' ),
+	),
+	array(
+		'handle'       => 'Theme_Textdomain-style',
+		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'assets/styles/style' . Classes\Enqueue_Styles::$min . '.css',
 		'dependencies' => array(),
 		'version'      => Classes\Enqueue_Styles::version( 'style' . Classes\Enqueue_Styles::$min . '.css' ),
 	),
