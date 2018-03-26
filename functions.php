@@ -11,6 +11,7 @@
  * Theme_Author
  * Theme_Author_Email
  * Theme_Author_URL
+ * Development_URL
  *
  *
  * Functions.php
