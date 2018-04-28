@@ -75,6 +75,7 @@ $args = apply_filters( 'custom_theme_setup', array(
 		array( 'type' => 'automatic-feed-links' ),
 		array( 'type' => 'title-tag' ),
 		array( 'type' => 'post-thumbnails' ),
+		array( 'type' => 'align-wide' ),
 		array(
 			'type'   => 'html5',
 			'params' => array(
