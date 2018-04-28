@@ -1,0 +1,38 @@
+// ========================================
+// Clearfix
+// ========================================
+
+// Add default column width.
+//
+// @example
+//   Basic Usage Sass.
+//     .foo {
+//       @include columns(12);
+//     }
+
+@mixin col($columns) {
+	$width: get-col-width($columns);
+	width: get-columns($columns);
+
+	&.no-gutter {
+		width: calc((100% / 12) * #{$width});
+	}
+}
+
+@mixin columns($columns) {
+	div[class^="col"] {
+		&.col-#{$columns} {
+			@include col(#{$columns});
+			margin-right: $gutter;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&.col-#{$columns}.no-gutter {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
