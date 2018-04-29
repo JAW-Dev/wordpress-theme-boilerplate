@@ -31,18 +31,18 @@ if ( ! defined( 'WPINC' ) ) {
 	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
 }
 
-/*
- * Autoloader
- * ----------------------------------------
+/**
+ * Autoloader.
+ *
+ * @author Theme_Author
+ * @since  1.0.0
+ *
+ * @param array The theme setup arguments.
  */
 require_once trailingslashit( get_template_directory() ) . trailingslashit( 'includes' ) . 'autoload.php';
 
-/*
- * Setup
- * ----------------------------------------
- */
 /**
- * Custom theme setup filter.
+ * Custom theme setup.
  *
  * @author Theme_Author
  * @since  1.0.0
@@ -122,10 +122,16 @@ $args = apply_filters( 'custom_theme_setup', array(
 
 $setup = new Classes\Setup( $args );
 
-/*
- * Register Widget Areas.
- * ----------------------------------------
+/**
+ * Admin Footer Text
+ *
+ * @author Theme_Author
+ * @since  1.0.0
+ *
+ * @param $arg string The text to replace the admin footer text.
  */
+$admin_footer_text = new Classes\Admin_Footer_Text();
+
 /**
  * Register Widget Areas.
  *
@@ -166,10 +172,6 @@ $args = apply_filters( 'custom_register_widget_areas',
 
 $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 
-/*
- * Enqueue Styles.
- * ----------------------------------------
- */
 /**
  * Enqueue Styles
  *
@@ -191,7 +193,6 @@ $register_widget_areas = new Classes\Register_Widget_Areas( $args );
  *     }
  * }
  */
-
 $args = array(
 	array(
 		'handle'       => 'Theme_Textdomain-theme',
@@ -208,8 +209,10 @@ $args = array(
 );
 $enqueue_styles = new Classes\Enqueue_Styles( $args );
 
-/*
+/**
  * Template Tags
- * ----------------------------------------
+ *
+ * @author Theme_Author
+ * @since  1.0.0
  */
 $template_tags = new Classes\Template_Tags( trailingslashit( get_stylesheet_directory() ) . trailingslashit( 'includes/functions' ) );
