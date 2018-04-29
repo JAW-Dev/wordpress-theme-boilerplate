@@ -19,7 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 
 	/**
-	 * Enqueue Styles
+	 * Call Template Function.
 	 *
 	 * @author Theme_Author
 	 * @since  1.0.0

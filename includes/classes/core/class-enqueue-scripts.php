@@ -19,7 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 if ( ! class_exists( __NAMESPACE__ . '\\Enqueue_Scripts' ) ) {
 
 	/**
-	 * Enqueue Styles
+	 * Enqueue Scripts
 	 *
 	 * @author Theme_Author
 	 * @since  1.0.0

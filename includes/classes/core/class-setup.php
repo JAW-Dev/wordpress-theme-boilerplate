@@ -19,7 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 if ( ! class_exists( __NAMESPACE__ . '\\Setup' ) ) {
 
 	/**
-	 * Name
+	 * Setup
 	 *
 	 * @author Theme_Author
 	 * @since  1.0.0
