@@ -13,17 +13,11 @@ if ( ! defined( 'WPINC' ) ) {
 	 wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
 }
 
-do_action( 'before_main_close' );
 ?>
 </main><!-- / #main -->
 <?php
-do_action( 'before_footer_main' );
-	get_template_part( 'template-parts/footer', 'main' );
-do_action( 'before_wp_footer' );
-	wp_footer();
-do_action( 'after_wp_footer' );
-do_action( 'before_body_close' );
+get_template_part( 'template-parts/footer', 'main' );
+wp_footer();
 ?>
 </body>
-<?php do_action( 'after_body' ); ?>
 </html>
