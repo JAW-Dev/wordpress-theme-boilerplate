@@ -8,4 +8,8 @@ div[class^="col"] {
 		margin-left: 0;
 		margin-right: 0;
 	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
 }

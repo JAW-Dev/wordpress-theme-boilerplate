@@ -1,13 +1,14 @@
+@charset "UTF-8";
 // ========================================
-// Clearfix
+// Columns
 // ========================================
 
-// Add default column width.
+// Grid Columns
 //
 // @example
 //   Basic Usage Sass.
 //     .foo {
-//       @include columns(12);
+//       @include columns($column-number);
 //     }
 
 @mixin col($columns) {
@@ -24,15 +25,6 @@
 		&.col-#{$columns} {
 			@include col(#{$columns});
 			margin-right: $gutter;
-		}
-
-		&:last-of-type {
-			margin-right: 0;
-		}
-
-		&.col-#{$columns}.no-gutter {
-			margin-left: 0;
-			margin-right: 0;
 		}
 	}
 }
