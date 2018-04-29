@@ -85,8 +85,7 @@ if ( ! class_exists( __NAMESPACE__ . '\\Call_Template_Function' ) ) {
 				$file = $filepath;
 
 				// Get the file extension.
-				$extension = substr( $file, strrpos( $file, '.' ) + 1 );
-
+				// $extension = substr( $file, strrpos( $file, '.' ) + 1 );.
 				// If 'Load' is true and the file is a PHP file.
 				if ( $filename === $pattern . '.php' ) {
 					include $file;

@@ -12,9 +12,9 @@
  * @version    1.0.0
  */
 
- if ( ! defined( 'WPINC' ) ) {
-	 wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
- }
+if ( ! defined( 'WPINC' ) ) {
+	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
+}
 
 if ( ! function_exists( 'Theme_Prefix_call_template_function' ) ) {
 	/**
@@ -29,7 +29,7 @@ if ( ! function_exists( 'Theme_Prefix_call_template_function' ) ) {
 	 * @return string
 	 */
 	function Theme_Prefix_call_template_function( $callback, ...$args ) {
-		$call_template_function = new Theme_Package\Includes\Classes\Call_Template_Function();
-		return $call_template_function->init( $callback, $args );
+		$template_function = new Theme_Package\Includes\Classes\Call_Template_Function();
+		return $template_function->init( $callback, $args );
 	}
 }

@@ -122,9 +122,9 @@ if ( ! class_exists( __NAMESPACE__ . '\\Setup' ) ) {
 				$params = ( ! empty( $support['params'] ) || isset( $support['params'] ) ) ? $support['params'] : null;
 				if ( null !== $params ) {
 					add_theme_support( $support['type'], $params );
-				} else {
-					add_theme_support( $support['type'] );
+					return;
 				}
+				add_theme_support( $support['type'] );
 			}
 		}
 
@@ -152,9 +152,9 @@ if ( ! class_exists( __NAMESPACE__ . '\\Setup' ) ) {
 				}
 				if ( isset( $sizes['crop'] ) ) {
 					add_image_size( $sizes['name'], $sizes['width'], $sizes['height'], $sizes['crop'] );
-				} else {
-					add_image_size( $sizes['name'], $sizes['width'], $sizes['height'] );
+					return;
 				}
+				add_image_size( $sizes['name'], $sizes['width'], $sizes['height'] );
 			}
 		}
 

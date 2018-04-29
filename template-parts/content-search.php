@@ -13,7 +13,7 @@
 if ( ! defined( 'WPINC' ) ) {
 	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
 }
- 
+
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
 	<header class="entry__header">
