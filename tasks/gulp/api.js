@@ -16,14 +16,14 @@ import fs from 'fs';
 export default {
   environment: ( argv.env ) ? argv.env : 'development',
 
-  getEnvironment () {
+  getEnvironment() {
     let environmentType;
     try {
-      environmentType = require(`./environments/${this.environment}`);
-    } catch (e) {
-      throw new Error(`No environment file found for ${this.environment}`);
+      environmentType = require( `./environments/${this.environment}` );
+    } catch ( e ) {
+      throw new Error( `No environment file found for ${this.environment}` );
     }
     environmentType.environment = this.environment;
     return environmentType;
-  }
-}
+  },
+};

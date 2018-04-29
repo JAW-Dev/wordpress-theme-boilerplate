@@ -24,7 +24,6 @@ const concatScripts = scriptsDir + '/' + enviroment.files.concatScripts;
  * @since 1.0.0
  */
 gulp.task( 'cleanScripts', () =>
-	//del([ files.js, files.jsmin ])
 	del([ js, jsmin ])
 );
 
@@ -48,7 +47,7 @@ gulp.task( 'concat', [ 'cleanScripts' ], () =>
   * @since 1.0.0
   */
  gulp.task( 'uglify', [ 'concat' ], () =>
-	 gulp.src( js )
+	gulp.src( js )
 		.pipe( ignore.exclude( enviroment.webpack ) )
 		.pipe( gulp.dest( scriptsDir ) )
 		.pipe( gulpif( enviroment.minimize, uglify({ 'mangle': false }) ) )
@@ -64,7 +63,7 @@ gulp.task( 'concat', [ 'cleanScripts' ], () =>
 gulp.task( 'webpack', [ 'uglify' ], () => {
 	gulp.src( js )
 		.pipe( gulpif( enviroment.webpack, webpackStream( webpackConfig ) ), webpack )
-		.pipe( gulpif( enviroment.webpack, gulp.dest( scriptsDir ) ) )
+		.pipe( gulpif( enviroment.webpack, gulp.dest( scriptsDir ) ) );
 });
 
 /**
@@ -72,4 +71,4 @@ gulp.task( 'webpack', [ 'uglify' ], () => {
   *
   * @since 1.0.0
   */
-gulp.task( 'scripts', [ 'uglify' ] );
+gulp.task( 'scripts', [ 'uglify' ]);

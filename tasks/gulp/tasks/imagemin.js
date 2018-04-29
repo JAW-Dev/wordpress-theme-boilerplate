@@ -29,9 +29,9 @@ gulp.task( 'imagemin', () =>
 			imagemin.svgo({
 				plugins: [
 					{removeViewBox: true},
-					{cleanupIDs: false}
-				]
-			})
+					{cleanupIDs: false},
+				],
+			}),
 		]) )
 		.pipe( gulp.dest( imagesDir ) )
 );
