@@ -2,10 +2,18 @@ module.exports = {
 	"env": {
 		"browser": true,
 		"jquery": true,
+		"node" : true,
 		"es6": true,
 	},
+	"ecmaFeatures": {
+        "modules": true,
+        "spread" : true,
+        "restParams" : true
+	},
+	"parserOptions": {
+        "sourceType": "module"
+    },
 	"extends": "wordpress",
-	//"installedESLint": true,
 	"plugins": [],
 	"rules": {
 		// Enforce spacing inside array brackets
