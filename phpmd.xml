@@ -36,4 +36,8 @@
     <rule ref="rulesets/unusedcode.xml/UnusedPrivateField" />
     <rule ref="rulesets/unusedcode.xml/UnusedPrivateMethod" />
     <rule ref="rulesets/unusedcode.xml/UnusedFormalParameter" />
+	<rule ref="rulesets/controversial.xml">
+		<exclude name="CamelCaseClassName"/>
+		<exclude name="CamelCasePropertyName"/>
+	</rule>
 </ruleset>
