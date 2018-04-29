@@ -14,7 +14,6 @@ if ( ! defined( 'WPINC' ) ) {
 	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
 }
 
-$name        = get_bloginfo( 'name', 'display' );
 $description = get_bloginfo( 'description', 'display' );
 ?>
 <header class="site-header">
@@ -22,7 +21,9 @@ $description = get_bloginfo( 'description', 'display' );
 		<section class="site-header__branding">
 			<div class="branding__wrap">
 				<h1 class="branding__title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $name ); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php echo esc_html( get_bloginfo( 'name', 'display' ) ); ?>
+					</a>
 				</h1>
 				<?php if ( $description ) : ?>
 					<p class="branding__description"><?php echo esc_html( $description ); ?></p>
