@@ -1,5 +1,5 @@
 export default {
-    
+
     /**
      * Enable bable.
      */
@@ -9,7 +9,7 @@ export default {
      * Enable JavaScript Concat.
      */
     concat: true,
-    
+
     /**
      * Enable file minimization.
      */
@@ -92,5 +92,5 @@ export default {
         '!phpunit.xml',
         '!webpack.config.js',
         '!yarn.lock',
-    ]
-}
+    ],
+};
