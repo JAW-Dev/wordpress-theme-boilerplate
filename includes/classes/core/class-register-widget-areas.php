@@ -50,18 +50,12 @@ if ( ! class_exists( __NAMESPACE__ . '\\Register_Widget_Areas' ) ) {
 		 *
 		 *         @type string $id            (Required) The unique identifier by which the sidebar will be called.
 		 *         @type string $name          (Required) The name or title of the sidebar.
-		 *         @type string $description   (Optional) Description of the sidebar, displayed in the Widgets interface.
-		 *                                         Default: 'Widget area for the $name'.
-		 *         @type string $class         (Optional) Extra CSS class to assign to the sidebar in the Widgets interface.
-		 *                                         Default: empty.
-		 *         @type string $before_widget (Optional) HTML content to prepend to each widget's HTML output.
-		 *                                         Default: '<aside class="widget %2$s">'.
-		 *         @type string $after_widget  (Optional) HTML content to append to each widget's HTML output.
-		 *                                         Default: '</aside>'.
-		 *         @type string $before_title  (Optional) HTML content to prepend to the sidebar title.
-		 *                                         Default: '<h3 class="widget-title">'.
-		 *         @type string $after_title   (Optional) HTML content to append to the sidebar title.
-		 *                                         Default: '</h3>'.
+		 *         @type string $description   (Optional) Description of the sidebar, displayed in the Widgets interface. Default: 'Widget area for the $name'.
+		 *         @type string $class         (Optional) Extra CSS class to assign to the sidebar in the Widgets interface. Default: empty.
+		 *         @type string $before_widget (Optional) HTML content to prepend to each widget's HTML output. Default: '<aside class="widget %2$s">'.
+		 *         @type string $after_widget  (Optional) HTML content to append to each widget's HTML output. Default: '</aside>'.
+		 *         @type string $before_title  (Optional) HTML content to prepend to the sidebar title. Default: '<h3 class="widget-title">'.
+		 *         @type string $after_title   (Optional) HTML content to append to the sidebar title. Default: '</h3>'.
 		 *     }
 		 * }
 		 *
@@ -81,24 +75,7 @@ if ( ! class_exists( __NAMESPACE__ . '\\Register_Widget_Areas' ) ) {
 		 * @author Jason Witt
 		 * @since  1.0.0
 		 *
-		 * @param array|string $args {
-		 *     Array or string of arguments for the sidebar being registered.
-		 *
-		 *     @type string $id            (Required) The unique identifier by which the sidebar will be called.
-		 *     @type string $name          (Required) The name or title of the sidebar.
-		 *     @type string $description   (Optional) Description of the sidebar, displayed in the Widgets interface.
-		 *                                     Default: 'Widget area for the $name'.
-		 *     @type string $class         (Optional) Extra CSS class to assign to the sidebar in the Widgets interface.
-		 *                                     Default: empty.
-		 *     @type string $before_widget (Optional) HTML content to prepend to each widget's HTML output.
-		 *                                     Default: '<aside class="widget %2$s">'.
-		 *     @type string $after_widget  (Optional) HTML content to append to each widget's HTML output.
-		 *                                     Default: '</aside>'.
-		 *     @type string $before_title  (Optional) HTML content to prepend to the sidebar title.
-		 *                                     Default: '<h3 class="widget-title">'.
-		 *     @type string $after_title   (Optional) HTML content to append to the sidebar title.
-		 *                                     Default: '</h3>'.
-		 * }
+		 * @param array|string $args Array or string of arguments for the sidebar being registered.
 		 *
 		 * @return void
 		 */
