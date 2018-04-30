@@ -14,11 +14,6 @@
     <rule ref="rulesets/codesize.xml/TooManyFields" />
     <rule ref="rulesets/codesize.xml/TooManyMethods" />
     <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity" />
-    <rule ref="rulesets/design.xml/EvalExpression" />
-    <rule ref="rulesets/design.xml/GotoStatement" />
-    <rule ref="rulesets/design.xml/NumberOfChildren" />
-    <rule ref="rulesets/design.xml/DepthOfInheritance" />
-    <rule ref="rulesets/design.xml/CouplingBetweenObjects" />
     <rule ref="rulesets/naming.xml/ShortVariable" />
     <rule ref="rulesets/naming.xml/LongVariable">
         <properties>
@@ -39,5 +34,9 @@
 	<rule ref="rulesets/controversial.xml">
 		<exclude name="CamelCaseClassName"/>
 		<exclude name="CamelCasePropertyName"/>
+	</rule>
+	<rule ref="rulesets/design.xml">
+		<exclude name="ExitExpression"/>
+		<exclude name="DevelopmentCodeFragment"/>
 	</rule>
 </ruleset>
