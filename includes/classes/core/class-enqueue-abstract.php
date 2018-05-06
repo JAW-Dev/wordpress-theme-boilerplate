@@ -47,7 +47,7 @@ abstract class Enqueue_Abstract {
 	/**
 	 * Arguments.
 	 *
-	 * @author Jason Witt
+	 * @author Theme_Author
 	 * @since  1.0.0
 	 *
 	 * @var array
@@ -66,16 +66,12 @@ abstract class Enqueue_Abstract {
 	 *     @type array {
 	 *         Array or string of arguments for the script being registered.
 	 *
-	 *         @type string $handle        (Required) The handle or name of the script.
-	 *         @type string $scr           (Required) The source of the file to enqueue.
-	 *         @type string $dependecies   (Optional) The dependencies of the enqueued file.
-	 *                                         Default: array()
-	 *         @type string $version       (Optional) The version of the file.
-	 *                                         Default: '1.0.0'.
-	 *         @type string $media     (Optional) If Stylesheet, The media for which this stylesheet has been defined.
-	 *                                         Default: 'all'.
-	 *         @type string $in_footer     (Optional) If JavaScript, set to true to enqueue file in the footer.
-	 *                                         Default: true.
+	 *         @type string $handle      (Required) The handle or name of the script.
+	 *         @type string $scr         (Required) The source of the file to enqueue.
+	 *         @type string $dependecies (Optional) The dependencies of the enqueued file. Default: array()
+	 *         @type string $version     (Optional) The version of the file. Default: filetime()/Your theme version.
+	 *         @type string $media       (Optional) If Stylesheet, The media for which this stylesheet has been defined. Default: 'all'.
+	 *         @type string $in_footer   (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.ype string $in_footer     (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.
 	 *     }
 	 * }
 	 *
@@ -92,23 +88,10 @@ abstract class Enqueue_Abstract {
 	/**
 	 * Defaults.
 	 *
-	 * @author Jason Witt
+	 * @author Theme_Author
 	 * @since  1.0.0
 	 *
-	 * @param array $args {
-	 *     Array of enqueued script arguments.
-	 *
-	 *     @type array {
-	 *         Array or string of arguments for the script being registered.
-	 *
-	 *         @type string $handle      (Required) The handle or name of the script.
-	 *         @type string $scr         (Required) The source of the file to enqueue.
-	 *         @type string $dependecies (Optional) The dependencies of the enqueued file. Default: array()
-	 *         @type string $version     (Optional) The version of the file. Default: filetime().
-	 *         @type string $media       (Optional) If Stylesheet, The media for which this stylesheet has been defined. Default: 'all'.
-	 *         @type string $in_footer   (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.ype string $in_footer     (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.
-	 *     }
-	 * }
+	 * @param array $args The arguments.
 	 *
 	 * @return array
 	 */
@@ -158,6 +141,54 @@ abstract class Enqueue_Abstract {
 	 * @return int
 	 */
 	public static function version( $version, $src, $handle ) {
+
+		// If custom version is set return it.
+		if ( ! empty( $version ) ) {
+			return $version;
+		}
+
+		$version = ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ? self::cache_buster( $src ) : self::theme_version( $handle );
+
+		// if src is not on the server domain, bail.
+		if ( ! self::check_domain( $src ) ) {
+			return;
+		}
+
+		return $version;
+	}
+
+	/**
+	 * Check Domain.
+	 *
+	 * @author Theme_Author
+	 * @since  1.0.0
+	 *
+	 * @param string $src     The file source.
+	 *
+	 * @return void
+	 */
+	public static function check_domain( $src ) {
+		$server_domain = Server_Information::get_domain();
+		$src_domain    = wp_parse_url( $src, PHP_URL_HOST );
+
+		if ( $src_domain !== $server_domain ) {
+			return;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Theme version.
+	 *
+	 * @author Theme_Author
+	 * @since  1.0.0
+	 *
+	 * @param string $handle  The css file handle.
+	 *
+	 * @return string
+	 */
+	private static function theme_version( $handle ) {
 		$parent_template = wp_get_theme()->get( 'Template' );
 		$theme_version   = wp_get_theme()->get( 'Version' );
 
@@ -165,14 +196,21 @@ abstract class Enqueue_Abstract {
 			$theme_version = wp_get_theme( $parent_template )->get( 'Version' );
 		}
 
-		// If custom version is set return it.
-		if ( $version ) {
-			return $version;
-		}
+		return $theme_version;
+	}
 
-		$document_root = isset( $_SERVER['DOCUMENT_ROOT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['DOCUMENT_ROOT'] ) ) : ''; // Input var okay.
-		$cache_buster  = filemtime( realpath( $document_root . wp_parse_url( $src, PHP_URL_PATH ) ) );
-		$version       = ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ? $cache_buster : $theme_version;
-		return $version;
+	/**
+	 * Cache Buster.
+	 *
+	 * @author Theme_Author
+	 * @since  1.0.0
+	 *
+	 * @param string $src     The file source.
+	 *
+	 * @return string
+	 */
+	private static function cache_buster( $src ) {
+		$document_root = Server_Information::get_document_root();
+		return filemtime( realpath( $document_root . wp_parse_url( $src, PHP_URL_PATH ) ) );
 	}
 }
