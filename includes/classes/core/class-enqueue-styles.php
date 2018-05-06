@@ -74,8 +74,9 @@ if ( ! class_exists( __NAMESPACE__ . '\\Enqueue_Styles' ) ) {
 		 * @return void
 		 */
 		public function enqueue() {
-			foreach ( $this->args as $arg ) {
-				wp_enqueue_style( $arg['handle'], $arg['scr'], $arg['dependencies'], $arg['version'], $arg['media'] );
+			foreach ( self::$args as $arg ) {
+				$src = ( '.css' === substr( $arg['scr'], -4 ) ) ? $arg['scr'] : $arg['scr'] . self::$min . '.css';
+				wp_enqueue_style( $arg['handle'], $src, $arg['dependencies'], self::version( $arg['version'], $src, $arg['handle'] ), $arg['media'] );
 			}
 		}
 	}

@@ -190,15 +190,12 @@ $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 $args = array(
 	array(
 		'handle'       => 'Theme_Textdomain-theme',
-		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'style' . Classes\Enqueue_Styles::$min . '.css',
-		'dependencies' => array(),
-		'version'      => Classes\Enqueue_Styles::version( 'style' . Classes\Enqueue_Styles::$min . '.css' ),
+		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'style',
+		'version'      => '1.0.1',
 	),
 	array(
 		'handle'       => 'Theme_Textdomain-style',
-		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'assets/styles/style' . Classes\Enqueue_Styles::$min . '.css',
-		'dependencies' => array(),
-		'version'      => Classes\Enqueue_Styles::version( 'style' . Classes\Enqueue_Styles::$min . '.css' ),
+		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'assets/styles/style',
 	),
 );
 $enqueue_styles = new Classes\Enqueue_Styles( $args );

@@ -52,7 +52,7 @@ abstract class Enqueue_Abstract {
 	 *
 	 * @var array
 	 */
-	protected $args;
+	protected static $args;
 
 	/**
 	 * Initialize the class
@@ -84,7 +84,7 @@ abstract class Enqueue_Abstract {
 	public function __construct( $args = array() ) {
 		$this->debug = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? true : false;
 		self::$min   = ( ! $this->debug ) ? '.min' : '';
-		$this->args = $this->defaults( $args );
+		self::$args = $this->defaults( $args );
 
 		$this->hooks();
 	}
@@ -101,16 +101,12 @@ abstract class Enqueue_Abstract {
 	 *     @type array {
 	 *         Array or string of arguments for the script being registered.
 	 *
-	 *         @type string $handle        (Required) The handle or name of the script.
-	 *         @type string $scr           (Required) The source of the file to enqueue.
-	 *         @type string $dependecies   (Optional) The dependencies of the enqueued file.
-	 *                                         Default: array()
-	 *         @type string $version       (Optional) The version of the file.
-	 *                                         Default: '1.0.0'.
-	 *         @type string $media     (Optional) If Stylesheet, The media for which this stylesheet has been defined.
-	 *                                         Default: 'all'.
-	 *         @type string $in_footer     (Optional) If JavaScript, set to true to enqueue file in the footer.
-	 *                                         Default: true.
+	 *         @type string $handle      (Required) The handle or name of the script.
+	 *         @type string $scr         (Required) The source of the file to enqueue.
+	 *         @type string $dependecies (Optional) The dependencies of the enqueued file. Default: array()
+	 *         @type string $version     (Optional) The version of the file. Default: filetime().
+	 *         @type string $media       (Optional) If Stylesheet, The media for which this stylesheet has been defined. Default: 'all'.
+	 *         @type string $in_footer   (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.ype string $in_footer     (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.
 	 *     }
 	 * }
 	 *
@@ -127,7 +123,7 @@ abstract class Enqueue_Abstract {
 			'handle'       => '',
 			'scr'          => '',
 			'dependencies' => array(),
-			'version'      => '1.0.0',
+			'version'      => '',
 			'media'        => 'all',
 			'in_footer'    => true,
 		);
@@ -155,28 +151,28 @@ abstract class Enqueue_Abstract {
 	 * @author Theme_Author
 	 * @since  1.0.0
 	 *
-	 * @param string $file           The file to enqueue.
-	 * @param int    $custom_version The custom stylesheet version.
+	 * @param string $version The version.
+	 * @param string $src     The file source.
+	 * @param string $handle  The css file handle.
 	 *
 	 * @return int
 	 */
-	public static function version( $file = null, $custom_version = '' ) {
+	public static function version( $version, $src, $handle ) {
+		$parent_template = wp_get_theme()->get( 'Template' );
+		$theme_version   = wp_get_theme()->get( 'Version' );
 
-		$theme_version = wp_get_theme()->get( 'Version' );
-
-		// Bail if file is not set.
-		if ( null === $file ) {
-			return $theme_version;
+		if ( 'parent-style' === $handle ) {
+			$theme_version = wp_get_theme( $parent_template )->get( 'Version' );
 		}
 
 		// If custom version is set return it.
-		if ( $custom_version ) {
-			return $custom_version;
+		if ( $version ) {
+			return $version;
 		}
 
-		$cache_buster  = filemtime( trailingslashit( get_stylesheet_directory() ) . $file );
+		$document_root = isset( $_SERVER['DOCUMENT_ROOT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['DOCUMENT_ROOT'] ) ) : ''; // Input var okay.
+		$cache_buster  = filemtime( realpath( $document_root . wp_parse_url( $src, PHP_URL_PATH ) ) );
 		$version       = ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ? $cache_buster : $theme_version;
-
 		return $version;
 	}
 }

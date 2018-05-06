@@ -12,8 +12,9 @@
 
 import { api, enviroment, gulp, gulpif, imagemin } from '../config/imports';
 
-const imagesDir = enviroment.paths.images;
-const images = imagesDir + '/' + enviroment.files.images;
+const imagesSource = enviroment.source.images;
+const imagesDest = enviroment.dest.images;
+const images = imagesSource + '/' + enviroment.files.images;
 
 /**
  * Optimize images.
@@ -33,5 +34,5 @@ gulp.task( 'imagemin', () =>
 				],
 			}),
 		]) )
-		.pipe( gulp.dest( imagesDir ) )
+		.pipe( gulp.dest( imagesDest ) )
 );
