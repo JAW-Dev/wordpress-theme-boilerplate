@@ -78,8 +78,9 @@ if ( ! class_exists( __NAMESPACE__ . '\\Enqueue_Scripts' ) ) {
 		 * @return void
 		 */
 		public function enqueue() {
-			foreach ( $this->args as $arg ) {
-				wp_enqueue_script( $arg['handle'], $arg['scr'], $arg['dependencies'], $arg['version'], $arg['in_footer'] );
+			foreach ( self::$args as $arg ) {
+				$src = ( '.js' === substr( $arg['scr'], -3 ) ) ? $arg['scr'] : $arg['scr'] . self::$min . '.js';
+				wp_enqueue_script( $arg['handle'], $src, $arg['dependencies'], self::version( $arg['version'], $src, $arg['handle'] ), $arg['in_footer'] );
 			}
 		}
 	}
