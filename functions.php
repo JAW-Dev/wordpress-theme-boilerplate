@@ -139,10 +139,10 @@ $admin_footer_text = new Classes\Admin_Footer_Text();
  * @since  1.0.0
  *
  * @param array $args {
- *     Array of register widget areas arguments.
- *
  *     @type array {
  *         Array or string of arguments for the sidebar being registered.
+ *
+ *     Array of register widget areas arguments.
  *
  *         @type string $id            (Required) The unique identifier by which the sidebar will be called.
  *         @type string $name          (Required) The name or title of the sidebar.
@@ -167,7 +167,7 @@ $args = apply_filters( 'custom_register_widget_areas',
 $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 
 /**
- * Enqueue Styles
+ * Enqueue Styles and Scripts
  *
  * @author Theme_Author
  * @since  1.0.0
@@ -181,9 +181,9 @@ $register_widget_areas = new Classes\Register_Widget_Areas( $args );
  *         @type string $handle      (Required) The handle or name of the script.
  *         @type string $scr         (Required) The source of the file to enqueue.
  *         @type string $dependecies (Optional) The dependencies of the enqueued file. Default: array()
- *         @type string $version     (Optional) The version of the file. Default: '1.0.0'.
+ *         @type string $version     (Optional) The version of the file. Default: filetime()/Your theme version.
  *         @type string $media       (Optional) If Stylesheet, The media for which this stylesheet has been defined. Default: 'all'.
- *         @type string $in_footer   (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.
+ *         @type string $in_footer   (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.ype string $in_footer     (Optional) If JavaScript, set to true to enqueue file in the footer. Default: true.
  *     }
  * }
  */
