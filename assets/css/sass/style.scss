@@ -1,0 +1,18 @@
+@charset "UTF-8";
+// ========================================
+// Core Sass file
+// ========================================
+// Dependencies
+@import "dependencies";
+
+// Base
+@import "base/index";
+
+// Layout
+@import "layout/index";
+
+//WordPress
+@import "wordPress";
+
+// Views
+@import "views/index";

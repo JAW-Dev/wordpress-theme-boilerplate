@@ -3,12 +3,15 @@
  * Find Replace
  *
  * Theme_Name
+ * theme-name-pkgjson
  * Theme_Package
  * Theme_URI
  * Theme_Description
+ * theme-description-pkgjson
  * Theme_Textdomain
  * Theme_Prefix
  * Theme_Author
+ * theme-author-pkgjson
  * Theme_Author_Email
  * Theme_Author_URL
  * Development_URL
@@ -116,7 +119,7 @@ $args = apply_filters( 'custom_theme_setup', array(
 	 * @example 'primary-menu' => __( 'Primary Menu', 'Theme_Textdomain' )
 	 */
 	'register_nav_menus' => apply_filters( 'custom_register_nav_menus', array(
-		'primary-menu' => __( 'Primary Menu', 'Theme_Textdomain' ),
+		'menu-primary' => __( 'Primary Menu', 'Theme_Textdomain' ),
 	) ),
 ) );
 
@@ -190,16 +193,25 @@ $register_widget_areas = new Classes\Register_Widget_Areas( $args );
 $args = array(
 	array(
 		'handle'       => 'Theme_Textdomain-theme',
-		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'style',
-		'version'      => '1.0.1',
+		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'style.css',
+		'version'      => '1.0.0',
 	),
 	array(
 		'handle'       => 'Theme_Textdomain-style',
-		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'assets/styles/style',
+		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'assets/css/style',
+		'version'      => '1.0.0',
 	),
 );
 $enqueue_styles = new Classes\Enqueue_Styles( $args );
 
+$args = array(
+	array(
+		'handle'       => 'Theme_Textdomain-scripts',
+		'scr'          => trailingslashit( get_stylesheet_directory_uri() ) . 'assets/js/script',
+		'version'      => '1.0.0',
+	),
+);
+$enqueue_scripts = new Classes\Enqueue_Scripts( $args );
 /**
  * Template Tags
  *

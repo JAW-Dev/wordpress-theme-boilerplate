@@ -8,33 +8,31 @@
  * @version   1.0.0
  */
 
-import { api, enviroment, webpack, UglifyJsPlugin } from './tasks/gulp/config/imports';
+import { api, enviroment, webpack } from './tasks/gulp/tasks/imports';
 
-const scriptsDest = enviroment.dest.scripts;
-const js = scriptsDest + '/' + enviroment.files.js;
+const path = require( 'path' );
+const jsSource = path.join( __dirname, enviroment.srcDir + enviroment.entryDir.scripts + enviroment.files.jsSrc );
+const jsOutput = path.join( __dirname, enviroment.srcDir + enviroment.outputDir.javascript );
 
 module.exports = {
-  entry: __dirname + '/' + js,
-  output: {
-      filename: 'script.min.js',
-      path: __dirname + '/' + scriptsDest + '/',
-  },
-  devtool: 'eval-source-map',
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        query: {
-          presets: [
-            [ 'env', { modules: false } ],
-          ],
-        },
-      },
-    ],
-  },
-  plugins: [
-      new UglifyJsPlugin(),
-  ],
+	devtool: 'source-map',
+	entry: jsSource,
+	output: {
+		filename: enviroment.files.js,
+		path: jsOutput,
+	},
+	module: {
+		rules: [
+			{
+				test: /\.jsx$|\.es6$|\.js$/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [ 'env' ],
+					},
+				},
+				exclude: /(node_modules|bower_components)/,
+			},
+		],
+	},
 };

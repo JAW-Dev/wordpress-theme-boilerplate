@@ -42,7 +42,7 @@ abstract class Enqueue_Abstract {
 	 *
 	 * @var string
 	 */
-	public static $min;
+	protected $min;
 
 	/**
 	 * Arguments.
@@ -52,7 +52,7 @@ abstract class Enqueue_Abstract {
 	 *
 	 * @var array
 	 */
-	protected static $args;
+	protected $args;
 
 	/**
 	 * Initialize the class
@@ -79,8 +79,8 @@ abstract class Enqueue_Abstract {
 	 */
 	public function __construct( $args = array() ) {
 		$this->debug = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? true : false;
-		self::$min   = ( ! $this->debug ) ? '.min' : '';
-		self::$args = $this->defaults( $args );
+		$this->min  = ( ! $this->debug ) ? '.min' : '';
+		$this->args  = $this->defaults( $args );
 
 		$this->hooks();
 	}

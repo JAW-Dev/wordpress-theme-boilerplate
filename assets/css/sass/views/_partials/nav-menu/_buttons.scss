@@ -1,0 +1,53 @@
+@charset "UTF-8";
+// ========================================
+// Navigation Buttons
+// ========================================
+
+.mobile-button {
+	background-color: transparent;
+	border: none;
+	float: right;
+	height: 0;
+	padding: 0;
+
+	&-icon {
+		@include media(">tablet-lg") {
+			display: none;
+		}
+
+		display: block;
+		height: px-to-rem(25);
+		width: px-to-rem(25);
+	}
+}
+
+.mobile-icon {
+	@include media(">tablet-lg") {
+		display: none;
+	}
+
+	display: block;
+	height: px-to-rem(25);
+	width: px-to-rem(25);
+}
+
+.nav__open {
+	@extend .mobile-button;
+	display: block;
+
+	&-icon {
+		@extend .mobile-icon;
+	}
+}
+
+.nav__close {
+	@extend .mobile-button;
+	display: none;
+	position: absolute;
+	right: px-to-rem(8);
+	top: px-to-rem(8);
+
+	&-icon {
+		@extend .mobile-icon;
+	}
+}

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+// ========================================
+// Navigation
+// ========================================
+
+@import "overlay";
+
+.site-header__nav {
+	@import "buttons";
+	height: auto;
+	width: auto;
+
+	&.menu-open {
+		@include media("<tablet-lg") {
+			.nav__open {
+				display: none;
+			}
+
+			.nav__close {
+				display: block;
+			}
+		}
+	}
+}
+
+.menu {
+	@include list-reset;
+	@include media("<tablet-lg") {
+		background-color: $color-background-body;
+		border: 1px solid;
+		display: block;
+		float: none;
+		height: 100%;
+		left: px-to-rem(-999);
+		padding: 1rem 2rem 1rem 1rem;
+		position: absolute;
+		top: 0;
+		transition: left 0.5s ease;
+		width: px-to-rem(256);
+
+		li {
+			&.clicked > ul {
+				height: auto;
+				left: auto;
+			}
+		}
+	}
+
+	display: flex;
+	height: auto;
+	position: relative;
+	z-index: 10;
+
+	&> li {
+		flex-grow: 1;
+	}
+
+	ul {
+		@include list-reset;
+		@include media("<tablet-lg") {
+			float: none;
+			height: 0;
+			position: relative;
+		}
+		float: left;
+		left: -999em;
+		position: absolute;
+		top: 100%;
+		z-index: 99999;
+
+		ul {
+			@include media("<tablet-lg") {
+				height: 0;
+			}
+			left: -999em;
+			top: 0;
+		}
+
+		li {
+			@include media(">tablet-lg") {
+				&:hover {
+					position: relative;
+				}
+
+				&:hover > ul {
+					left: 100%;
+				}
+			}
+		}
+
+		a {
+			width: px-to-rem(150);
+		}
+	}
+
+	li:hover > ul {
+		left: auto;
+	}
+
+
+	li {
+		@include media("<tablet-lg") {
+			&.clicked > ul {
+				height: auto;
+				left: auto;
+			}
+		}
+	}
+
+	a {
+		display: block;
+	}
+}
+
+.menu-open .menu {
+	@include media("<tablet-lg") {
+		left: 0;
+		transition: left 0.3s ease 0.2s;
+	}
+}

@@ -14,22 +14,21 @@ if ( ! defined( 'WPINC' ) ) {
 	wp_die( 'No Access Allowed!', 'Error!', array( 'back_link' => true ) );
 }
 
-$description = get_bloginfo( 'description', 'display' );
 ?>
-<header class="site-header">
-	<div class="wrap">
-		<section class="site-header__branding">
-			<div class="branding__wrap">
-				<h1 class="branding__title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php echo esc_html( get_bloginfo( 'name', 'display' ) ); ?>
-					</a>
-				</h1>
-				<?php if ( $description ) : ?>
-					<p class="branding__description"><?php echo esc_html( $description ); ?></p>
-				<?php endif; ?>
-			</div>
-		</section><!-- /.site-header__branding -->
-		<?php get_template_part( 'template-parts/nav-menu', 'main' ); ?>
-	</div><!-- /.wrap -->
+<header class="site-header row">
+	<section class="col-2 site-header__branding">
+		<div class="branding__wrap">
+			<h1 class="branding__title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php echo esc_html( get_bloginfo( 'name', 'display' ) ); ?>
+				</a>
+			</h1>
+			<?php if ( get_bloginfo( 'description' ) ) : ?>
+				<p class="branding__description">
+					<?php echo esc_html( get_bloginfo( 'description', 'display' ) ); ?>
+				</p>
+			<?php endif; ?>
+		</div>
+	</section><!-- /.site-header__branding -->
+	<?php get_template_part( 'template-parts/_partials/nav-menu/main' ); ?>
 </header><!-- /.site-header -->

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+// ========================================
+// Colors
+// ========================================
+
+$black: rgb(0, 0, 0);
+$black-overlay: rgba(0, 0, 0, 0.6);
+$white: rgb(255, 255, 255);
+$mineshaft: rgb(46, 46, 46);
+$scorpion: rgb(92, 92, 92);
+$grey: rgb(138, 138, 138);
+$silver: rgb(184, 184, 184);
+$mercury: rgb(230, 230, 230);
+$yellow: rgb(255, 255, 0);
+
+
+$color-background-screen: $mercury;
+$color-text-screen: $grey;
+$color-screen-reader-box-shadow: rgba(0, 0, 0, 0.6);
+$color-background-body: $mercury;
+$color-text-main:       $mineshaft;
+$color-background-hr:   $grey;
+$color-border-abbr:     $scorpion;
